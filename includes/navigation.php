@@ -32,6 +32,7 @@
           <li><a href="leavetype.php">Leave Type</a></li>
           <li><a href="deducttype.php">Deduct Type</a></li>
           <li><a href="department.php">Department</a></li>
+          <li><a href="empincome.php">Employee Income</a></li>
         </ul>
       </li>
                 </ul>
