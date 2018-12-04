@@ -42,6 +42,7 @@
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="systemcon.php">Prepare for Monthly Closing</a></li>
+          <li><a href="systemconfig.php">System Configuration</a></li>
         
         </ul>
       </li>
