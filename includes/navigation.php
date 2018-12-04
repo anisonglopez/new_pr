@@ -29,6 +29,7 @@
           <li><a href="employee.php">Employee</a></li>
           <li><a href="branch.php">Branch</a></li>
           <li><a href="position.php">Position</a></li>
+          <li><a href="leavetype.php">Leave Type</a></li>
         </ul>
       </li>
                 </ul>
