@@ -63,3 +63,14 @@ footer {
     background: inherit;
     left: 20px;
   }
+  .autocomplete_list {
+    background: #ffffff;
+    display: block;
+    border: 1px solid gray;
+    text-align: left;
+    z-index: 200;
+  }
+  .autocomplete_list *  {
+    /* font-family: "myriad pro", "segoe ui", "trebuchet ms", sans-serif; */
+    font-size: 16px;
+  }

@@ -14,13 +14,29 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="#">ประมวลผลประจำรอบ</a>
                     </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
+                     <!-- time sheet -->
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Time Sheet
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">ประวัติการลงเวลา</a></li>
+          <li><a href="#">รายการทำงานล่วงเวลา</a></li>
+        </ul>
+      </li>
+                       <!-- รายได้ - รายการหัก -->
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">รายได้ - รายการหัก
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">รายการหัก</a></li>
+          <li><a href="#">รายได้อื่น ๆ</a></li>
+          <li><a href="transcost.php">ค่าเดินทาง</a></li>
+        </ul>
+      </li>
+                     <li>
+                        <a href="#">รายงาน</a>
                     </li>
                     <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Master Data
@@ -43,7 +59,6 @@
         <ul class="dropdown-menu">
           <li><a href="systemcon.php">Prepare for Monthly Closing</a></li>
           <li><a href="systemconfig.php">System Configuration</a></li>
-        
         </ul>
       </li>
 
