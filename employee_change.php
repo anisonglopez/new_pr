@@ -185,7 +185,7 @@ $output = "";
                    $objQuery = mysqli_query($conn, $strSQL);
                     while($objResuut = mysqli_fetch_array($objQuery))
                     {
-                      if($objResuut["DeptCode"] == $posicode)
+                      if($objResuut["PosiCode"] == $posicode)
                       {
                         $sel = "selected";
                       }
@@ -193,7 +193,7 @@ $output = "";
                       {
                         $sel = "";
                       }
-                      $output.='<option value="'.$objResuut["PosiCode"].'">'.$objResuut["PosiCode"].' - '.$objResuut["PosiTDesc"].'</option>';
+                      $output.='<option value="'.$objResuut["PosiCode"].'" '.$sel.'>'.$objResuut["PosiCode"].' - '.$objResuut["PosiTDesc"].'</option>';
                    
                     }
                     
