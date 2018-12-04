@@ -36,6 +36,16 @@
           <li><a href="bank.php">Bank Information</a></li>
         </ul>
       </li>
+      <!-- Config -->
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Configuration
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="systemcon.php">Prepare for Monthly Closing</a></li>
+        
+        </ul>
+      </li>
+
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
       <li>
