@@ -38,7 +38,7 @@
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="otherdeduct.php">รายการหัก</a></li>
-          <li><a href="#">รายได้อื่น ๆ</a></li>
+          <li><a href="otherallowance.php">รายได้อื่น ๆ</a></li>
           <li><a href="transcost.php">ค่าเดินทาง</a></li>
         </ul>
       </li>
