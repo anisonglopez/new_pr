@@ -14,7 +14,14 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">ประมวลผลประจำรอบ</a>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">ประมวลผลประจำรอบ
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="systemcon.php">จัดเตรียมข้อมูลก่อนระมวลผล</a></li>
+                              <li><a href="#">ประมวลผลค่าจ้างประจำรอบ</a></li>
+                            </ul>
+                          </li>
                     </li>
                      <!-- time sheet -->
       <li class="dropdown">
@@ -39,26 +46,25 @@
                         <a href="#">รายงาน</a>
                     </li>
                     <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Master Data
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">ข้อมูลตั้งต้น
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="employee.php">Employee</a></li>
-          <li><a href="branch.php">Branch</a></li>
-          <li><a href="position.php">Position</a></li>
-          <li><a href="leavetype.php">Leave Type</a></li>
-          <li><a href="deducttype.php">Deduct Type</a></li>
-          <li><a href="department.php">Department</a></li>
-          <li><a href="empincome.php">Employee Income</a></li>
-          <li><a href="bank.php">Bank Information</a></li>
+          <li><a href="employee.php">พนักงาน</a></li>
+          <li><a href="branch.php">สาขา</a></li>
+          <li><a href="position.php">ตำแหน่งงาน</a></li>
+          <li><a href="leavetype.php">ประเภทการลา</a></li>
+          <li><a href="deducttype.php">ประเภทการหัก</a></li>
+          <li><a href="department.php">แผนก/ฝ่าย</a></li>
+          <li><a href="empincome.php">รายได้</a></li>
+          <li><a href="bank.php">ธนาคาร</a></li>
         </ul>
       </li>
       <!-- Config -->
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Configuration
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">กำหนดค่าระบบ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="systemcon.php">Prepare for Monthly Closing</a></li>
-          <li><a href="systemconfig.php">System Configuration</a></li>
+          <li><a href="systemconfig.php">กำหนดค่าใช้งานระบบ</a></li>
         </ul>
       </li>
 
