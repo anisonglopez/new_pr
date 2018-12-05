@@ -145,7 +145,6 @@ $output = "";
                       }
 
                     $output.='<option value="'.$objResuut["DeptCode"].'" '.$sel.'>'.$objResuut["DeptCode"].' - '.$objResuut["DeptTDesc"].'</option>';
-                    
                     }
                     
                   $output.='</select>      

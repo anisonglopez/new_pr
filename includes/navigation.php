@@ -30,7 +30,7 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">รายได้ - รายการหัก
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">รายการหัก</a></li>
+          <li><a href="otherdeduct.php">รายการหัก</a></li>
           <li><a href="#">รายได้อื่น ๆ</a></li>
           <li><a href="transcost.php">ค่าเดินทาง</a></li>
         </ul>

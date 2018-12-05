@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>Payroll System</title>
-
+    <script type="text/javascript" src="dependencies/autocomplete/autocomplete.js"></script>
+    <link rel="stylesheet" href="dependencies/autocomplete/autocomplete.css"  type="text/css"/>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
