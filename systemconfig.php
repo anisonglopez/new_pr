@@ -269,7 +269,7 @@ $UMF_R = $rows['UMF_R'];
                         </div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">Term_P_M : </dt>
+                                <dt class="col-sm-4 info-box-label">รอบการคำนวณ(ครั้ง) : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="Term_P_M" type="text" data-placement="top"  class="form-control" value="<?php echo $Term_P_M;?>" / >        
                                 </dd>
@@ -277,7 +277,7 @@ $UMF_R = $rows['UMF_R'];
                         </div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">PaidDate : </dt>
+                                <dt class="col-sm-4 info-box-label">วันที่จ่ายครั้งที่ 1 : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="PaidDate" type="text" data-placement="top"  class="form-control" value="<?php echo $PaidDate;?>" / >        
                                 </dd>
@@ -285,7 +285,7 @@ $UMF_R = $rows['UMF_R'];
                         </div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">PaidDate_2 : </dt>
+                                <dt class="col-sm-4 info-box-label">วันที่จ่ายครั้งที่ 2 : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="PaidDate_2" type="text" data-placement="top"  class="form-control " value="<?php echo $PaidDate_2;?>" / >        
                                 </dd>
@@ -309,7 +309,7 @@ $UMF_R = $rows['UMF_R'];
                         </div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">ShiftALW_M_PD : </dt>
+                                <dt class="col-sm-4 info-box-label">ค่าเข้ากะเช้า : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="ShiftALW_M_PD" type="text" data-placement="top"  class="form-control" value="<?php echo $ShiftALW_M_PD;?>"/ >        
                                 </dd>
@@ -317,7 +317,7 @@ $UMF_R = $rows['UMF_R'];
                         </div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">ShiftALW_E_PD : </dt>
+                                <dt class="col-sm-4 info-box-label">ค่าเข้ากะบ่าย : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="ShiftALW_E_PD" type="text" data-placement="top"  class="form-control" value="<?php echo $ShiftALW_E_PD;?>" / >        
                                 </dd>
@@ -325,7 +325,7 @@ $UMF_R = $rows['UMF_R'];
                         </div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">ShiftALW_N_PD : </dt>
+                                <dt class="col-sm-4 info-box-label">ค่าเข้ากะดึก : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="ShiftALW_N_PD" type="text" data-placement="top"  class="form-control" value="<?php echo $ShiftALW_N_PD;?>" / >        
                                 </dd>
@@ -349,7 +349,7 @@ $UMF_R = $rows['UMF_R'];
                         </div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">LiveALW_PM : </dt>
+                                <dt class="col-sm-4 info-box-label">ค่าครองชีพ : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="LiveALW_PM" type="text" data-placement="top"  class="form-control" value="<?php echo $LiveALW_PM;?>" / >        
                                 </dd>
@@ -357,7 +357,7 @@ $UMF_R = $rows['UMF_R'];
                         </div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">NoAbsALW_PT : </dt>
+                                <dt class="col-sm-4 info-box-label">ค่าเบี้ยขยัน : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="NoAbsALW_PT" type="text" data-placement="top"  class="form-control" value="<?php echo $NoAbsALW_PT;?>" / >        
                                 </dd>
@@ -365,7 +365,7 @@ $UMF_R = $rows['UMF_R'];
                         </div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">FoodALW_PD : </dt>
+                                <dt class="col-sm-4 info-box-label">ค่าอาหาร : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="FoodALW_PD" type="text" data-placement="top"  class="form-control" value="<?php echo $FoodALW_PD;?>" / >        
                                 </dd>
@@ -373,7 +373,7 @@ $UMF_R = $rows['UMF_R'];
                         </div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">NightFoodShift : </dt>
+                                <dt class="col-sm-4 info-box-label">ค่าอาหารกะดึก : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="NightFoodShift" type="text" data-placement="top"  class="form-control" value="<?php echo $NightFoodShift;?>" / >        
                                 </dd>
