@@ -74,3 +74,6 @@ footer {
     /* font-family: "myriad pro", "segoe ui", "trebuchet ms", sans-serif; */
     font-size: 16px;
   }
+  .hide {
+    display:none; 
+}

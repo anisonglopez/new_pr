@@ -28,7 +28,7 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Time Sheet
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">ประวัติการลงเวลา</a></li>
+          <li><a href="attentran.php">ประวัติการลา</a></li>
           <li><a href="#">รายการทำงานล่วงเวลา</a></li>
         </ul>
       </li>

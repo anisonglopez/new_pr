@@ -7,36 +7,33 @@ if($_SESSION['UserID'] == "")
 }
 ?>
 <?php include("includes/header.php"); ?>
-<?php 
-$sql = "SELECT tm03_employee.EmplCode,tm03_employee.BirthDate,tm03_employee.Salary, tm03_employee.EmplType, tm03_employee.EmplTName, tm02_department.DeptTDesc, tm02_position.PosiTDesc, tm03_employee.Sex  ";
-$sql .= "FROM tm03_employee ";
-$sql .= "INNER JOIN tm02_department ON tm03_employee.DeptCode=tm02_department.DeptCode ";
- $sql .= "INNER JOIN tm02_position ON tm03_employee.PosiCode=tm02_position.PosiCode ";
-$sql .= "ORDER BY EmplCode ASC ";
-$DATA = mysqli_query($conn, $sql);
-function getAge($birthday) {
-    $then = strtotime($birthday);
-    return(floor((time()-$then)/31556926));
-    }
-?>
+
         <div class="row">
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-                <h1>Employee</h1>
+                <h1>Import Employee</h1>
             <hr>
             
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                        <a href="employee_create.php">
-                        <button type="button" class="btn btn-success">คลิกเพื่อสร้างพนักงานใหม่ </button>
+                        <p>
+                        <a href="employee.php">
+                        <button type="button" class="btn btn-info">กลับ </button>
                         </a>
-                        <a href="employee_import.php">
-                        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-import" aria-hidden="true"></span> Import Data </button>
+
+                        <button class="btn">
+                        <input type="file" name="file" id="file"   size="20"/>
+                        </button>
+                        <button type="submit" id="submit_import" name="Import" class="btn btn-primary button-loading" data-loading-text="Loading...">Import</button>
+                        </p>
+
+                        <a href="employee_create.php">
+                        <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> ยืนยันการนำเข้าข้อมูล</button>
                         </a>
                         <a href="employee_create.php">
-                        <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> ดาวน์โหลดไฟล์นำเข้า</button>
+                        <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span>ยกเลิกการนำเข้าข้อมูล</button>
                         </a>
                         <a href="employee_create.php">
                         <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> </button>
@@ -58,33 +55,7 @@ function getAge($birthday) {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php
-while ($rows = mysqli_fetch_array($DATA)) {
-    $EmplCode = $rows['EmplCode'];
-    $EmplType = $rows['EmplType'];
-    $EmplTName = $rows['EmplTName'];
-    $DeptTDesc = $rows['DeptTDesc'];
-    $PosiTDesc = $rows['PosiTDesc'];
-    $Sex = $rows['Sex'];
-    $dateB=$rows['BirthDate'];
-    $BirthDate = getAge($dateB);
-    $Salary=$rows['Salary'];
-
-    if( $EmplType == "D"){
-      $EmplType = "รายวัน";
-    }
-    else{
-      $EmplType = "รายเดือน";
-    }
-    if( $Sex == "F"){
-      $Sex = "หญิง";
-    }
-    elseif($Sex =="M"){
-      $Sex = "ชาย";
-    }
-
-
-                                ?>            
+                                   
                                 <tr>
       <td class="mx-2"><?php echo $EmplCode; ?></td>
       <td style="text-align: center;"><?php echo $EmplType; ?></td>
@@ -103,11 +74,12 @@ while ($rows = mysqli_fetch_array($DATA)) {
   </center>
   </td>
     </tr>
-<?php } ?>
+
                                     
                                 </tbody>
                             </table>
                             <!-- /.table-responsive -->
+                            <p id=detail></p>
          </div>
 
 </div>
@@ -122,6 +94,26 @@ while ($rows = mysqli_fetch_array($DATA)) {
     });
     </script>
    
-
+   <script>
+                    $(document).ready(function(){
+                            $( submit_import ).on( "click", function() { 
+                                var file_data = $('#file').prop('files')[0];  
+                                console.log(file_data);
+                                $.ajax({  
+                                                url:"employee_import_checkdata.php",  
+                                                method:"post",  
+                                                data:{file_data:file_data},         
+                                                success:function(data){             
+                                                        $('#detail').html(data);  
+                                                },
+                                                error: function (jqXHR, exception) {
+                                                    document.write(exception);
+                                                }
+                                        });  
+    
+                            });
+                    });
+                   
+        </script>
         
   <!-- Script Delete-->
