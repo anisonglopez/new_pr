@@ -51,7 +51,7 @@ if($_SESSION['UserID'] == "")
             
        
          <dl class="row">
-          <dt class="col-sm-4 info-box-label">Employee Type : <span class="field-required">*</span></dt>
+          <dt class="col-sm-4 info-box-label">ประเภทพนักงาน: <span class="field-required">*</span></dt>
           <dd class="col-sm-4 info-box-label">
           <select class="form-control"  name="EmplType" required>
             <option value="">Select</option>   
@@ -62,7 +62,7 @@ if($_SESSION['UserID'] == "")
          </dl>
        
          <dl class="row">
-          <dt class="col-sm-4 info-box-label">Process Type : <span class="field-required">*</span></dt>
+          <dt class="col-sm-4 info-box-label">การประมวลผล : <span class="field-required">*</span></dt>
           <dd class="col-sm-4 info-box-label">
           <select class="form-control"  name="ProcCode" required>
             <option value="">Select</option>   
@@ -106,16 +106,16 @@ if($_SESSION['UserID'] == "")
           <div class="title-header-info-box add-pad">
             <ul class="nav nav-tabs" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active " data-toggle="tab" href="#tabEmp" id="tabspecification" role="tab">Employee Information</a>
+                <a class="nav-link active " data-toggle="tab" href="#tabEmp" id="tabspecification" role="tab">ข้อมูลพนักงาน</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tabFamily" id="tabspecification" role="tab">Family</a>
+                <a class="nav-link" data-toggle="tab" href="#tabFamily" id="tabspecification" role="tab">ครอบครัว</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tabPersonal" id="tabspecification" role="tab">Personal Info</a>
+                <a class="nav-link" data-toggle="tab" href="#tabPersonal" id="tabspecification" role="tab">ข้อมูลทั่วไป</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tabOther" id="tabspecification" role="tab">Other Information</a>
+                <a class="nav-link" data-toggle="tab" href="#tabOther" id="tabspecification" role="tab">อื่น ๆ</a>
               </li>
             </ul>
           </div>
@@ -128,7 +128,7 @@ if($_SESSION['UserID'] == "")
                   <div class="row">
                     <div class="col-md-12">
                       <dl class="row">
-                        <dt class="col-sm-3 info-box-label">Department : <span class="field-required">*</span></dt>
+                        <dt class="col-sm-3 info-box-label">แผนก/หน่วยงาน : <span class="field-required">*</span></dt>
                         <dd class="col-sm-3 info-box-label">
                          <select class="form-control"  name="DeptCode" required>
                          <option value="">Select</option>   
@@ -144,7 +144,7 @@ if($_SESSION['UserID'] == "")
                           ?>
                         </select>      
                         </dd>
-                        <dt class="col-sm-2 info-box-label">Bank : </dt>
+                        <dt class="col-sm-2 info-box-label">ธนาคารสำหรับโอนเงิน : </dt>
                         <dd class="col-sm-3 info-box-label">
                         <select class="form-control"  name="BankCode" \>
                         <option value="">Select</option>   
@@ -165,7 +165,7 @@ if($_SESSION['UserID'] == "")
                     </div>
                     <div class="col-md-12">
                       <dl class="row">
-                       <dt class="col-sm-3 info-box-label">Position : <span class="field-required">*</span></dt>
+                       <dt class="col-sm-3 info-box-label">ตำแหน่งงาน : <span class="field-required">*</span></dt>
                        <dd class="col-sm-3 info-box-label">
                        <select class="form-control"  name="PosiCode" required>
                        <option value="">Select</option>   
@@ -255,8 +255,8 @@ if($_SESSION['UserID'] == "")
                     <div class="col-md-12">
                       <dl class="row">
                         <dt class="col-sm-3 info-box-label">กองทุนสำรองเลี้ยงชีพ : </dt>
-                        <dd class="col-sm-3 info-box-label">
-                        <input name="PF_Flag" type="checkbox" data-placement="top"  class="form-control" id="PF_Flag_create" onclick="PF_Flag_create_function()" value="1"/>       
+                        <dd class="col-sm-3 ">
+                        <input name="PF_Flag" type="checkbox" data-placement="top"   id="PF_Flag_create" onclick="PF_Flag_create_function()" value="1"/>       
                         </dd>
                         <dt class="col-sm-2 info-box-label">รหัสสมาชิกกองทุน : </dt>
                         <dd class="col-sm-3 info-box-label">
@@ -284,8 +284,8 @@ if($_SESSION['UserID'] == "")
                       <dl class="row">
                         <dt class="col-sm-3 info-box-label">เงื่อนไขภาษี : <span class="field-required">*</span></dt>
                         <dd class="col-sm-3">
-                        <input   type="radio" name="TaxCond" value="C" required> Company 
-                      <input type="radio" name="TaxCond" value="E" required> Employee
+                        <input   type="radio" name="TaxCond" value="C" required> บริษัทจ่าย   &nbsp;&nbsp;
+                      <input type="radio" name="TaxCond" value="E" required> พนักงานจ่ายเอง
                         </dd>
                         <dt class="col-sm-2 info-box-label"></dt>
                         <dd class="col-sm-3 info-box-label"></dd>

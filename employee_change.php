@@ -77,16 +77,16 @@ $output = "";
 
 
        <dl class="row">
-        <dt class="col-sm-4 info-box-label">Employee Type : <span class="field-required">*</span></dt>
+        <dt class="col-sm-4 info-box-label">ประเภทพนักงาน : <span class="field-required">*</span></dt>
         <dd class="col-sm-4 info-box-label">
         <select class="form-control"  name="EmplType" required>
-          <option value="D" '.$EmplDSe.'>Daily Employee</option>
-          <option value="M" '.$EmplMSe.'>Monthly Employee</option>
+          <option value="D" '.$EmplDSe.'>รายวัน</option>
+          <option value="M" '.$EmplMSe.'>รายเดือน</option>
         </select>      
         </dd>
        </dl>
        <dl class="row">
-        <dt class="col-sm-4 info-box-label">Process Type : <span class="field-required">*</span></dt>
+        <dt class="col-sm-4 info-box-label">การประมวลผล : <span class="field-required">*</span></dt>
         <dd class="col-sm-4 info-box-label">
         <select class="form-control"  name="ProcCode" required>
           <option value="1" '.$ProcASe.'>Automatic</option>
@@ -104,16 +104,16 @@ $output = "";
         <div class="title-header-info-box add-pad">
           <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active " data-toggle="tab" href="#tab1" id="tabspecification" role="tab">Employee Information</a>
+              <a class="nav-link active " data-toggle="tab" href="#tab1" id="tabspecification" role="tab">ข้อมูลพนักงาน</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#tab2" id="tabspecification" role="tab">Family</a>
+              <a class="nav-link" data-toggle="tab" href="#tab2" id="tabspecification" role="tab">ครอบครัว</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#tab3" id="tabspecification" role="tab">Personal Info</a>
+              <a class="nav-link" data-toggle="tab" href="#tab3" id="tabspecification" role="tab">ข้อมูลทั่วไป</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#tab4" id="tabspecification" role="tab">Other Information</a>
+              <a class="nav-link" data-toggle="tab" href="#tab4" id="tabspecification" role="tab">อื่น ๆ</a>
             </li>
           </ul>
         </div>
@@ -126,7 +126,7 @@ $output = "";
                 <div class="row">
                 <div class="col-md-12">
                 <dl class="row">
-                  <dt class="col-sm-3 info-box-label">Dapartment : <span class="field-required">*</span></dt>
+                  <dt class="col-sm-3 info-box-label">แผนก/หน่วยงาน : <span class="field-required">*</span></dt>
                   <dd class="col-sm-3 info-box-label">
                    <select class="form-control"  name="DeptCode" required>';
                     
@@ -149,7 +149,7 @@ $output = "";
                     
                   $output.='</select>      
                   </dd>
-                  <dt class="col-sm-2 info-box-label">Bank : </dt>
+                  <dt class="col-sm-2 info-box-label">ธนาคารสำหรับโอนเงิน : </dt>
                   <dd class="col-sm-3 info-box-label">
                   <select class="form-control"  name="BankCode" >
                   <option value="">Select</option>
@@ -176,7 +176,7 @@ $output = "";
               </div>
               <div class="col-md-12">
                 <dl class="row">
-                 <dt class="col-sm-3 info-box-label">Position : <span class="field-required">*</span></dt>
+                 <dt class="col-sm-3 info-box-label">ตำแหน่งงาน : <span class="field-required">*</span></dt>
                  <dd class="col-sm-3 info-box-label">
                  <select class="form-control"  name="PosiCode" required>';
                     
@@ -271,8 +271,8 @@ $output = "";
                  <div class="col-md-12">
                       <dl class="row">
                       <dt class="col-sm-3 info-box-label">พ้นสถาพ :</dt>
-                      <dd class="col-sm-3 info-box-label">
-                      <input name="ProbFlag" id="ProbFlag" type="checkbox"  value="1" data-placement="top"   class="form-control" onclick="ProbFlag_Function()" '.$ProbFlag_ckk.' />     
+                      <dd class="col-sm-3">
+                      <input name="ProbFlag" id="ProbFlag" type="checkbox"  value="1" data-placement="top"   onclick="ProbFlag_Function()" '.$ProbFlag_ckk.' />     
                       </dd>
                       <dt class="col-sm-2 info-box-label">วันที่พ้นสถาพ :</dt>
                       <dd class="col-sm-3 info-box-label">
@@ -307,8 +307,8 @@ $output = "";
                  <div class="col-md-12">
                       <dl class="row">
                         <dt class="col-sm-3 info-box-label">กองทุนสำรองเลี้ยงชีพ : </dt>
-                        <dd class="col-sm-3 info-box-label">
-                        <input name="PF_Flag" type="checkbox" '.$PF_Flag_ckk.' data-placement="top"  class="form-control" id="PF_Flag" onclick="PF_Flag_edit_function()" value="1"/>       
+                        <dd class="col-sm-3 ">
+                        <input name="PF_Flag" type="checkbox" '.$PF_Flag_ckk.' data-placement="top"  id="PF_Flag" onclick="PF_Flag_edit_function()" value="1"/>       
                         </dd>
                         <dt class="col-sm-2 info-box-label">รหัสสมาชิกกองทุน : </dt>
                         <dd class="col-sm-3 info-box-label">
@@ -795,4 +795,108 @@ $output = "";
 
 <?php include("includes/footer.php"); ?>
 
+  <script>
+  function PF_Flag_create_function() {
+    var provident_fund_checkbox = document.getElementById("PF_Flag_create");
+    var PF_MemNo = document.getElementById("PF_MemNo_create");
+    var PF_EnterDate = document.getElementById("PF_EnterDate_create");
+    var PF_E_Rate = document.getElementById("PF_E_Rate_create");
+    if (provident_fund_checkbox.checked == true){
+        PF_MemNo.disabled = "";
+        PF_EnterDate.disabled = "";
+        PF_E_Rate.disabled = "";
+
+    } else {
+        PF_MemNo.disabled = "disabled";
+        PF_EnterDate.disabled = "disabled";
+        PF_E_Rate.disabled = "disabled";
+        // PF_MemNo.value = "";
+        // PF_EnterDate.value = "";
+        // PF_E_Rate.value = "";
+    }
+}
+function PF_Flag_edit_function() {
+    var provident_fund_checkbox = document.getElementById("PF_Flag");
+    var PF_MemNo = document.getElementById("PF_MemNo");
+    var PF_EnterDate = document.getElementById("PF_EnterDate");
+    var PF_E_Rate = document.getElementById("PF_E_Rate");
+    if (provident_fund_checkbox.checked == true){
+        PF_MemNo.disabled = "";
+        PF_EnterDate.disabled = "";
+        PF_E_Rate.disabled = "";
+
+    } else {
+        PF_MemNo.disabled = "disabled";
+        PF_EnterDate.disabled = "disabled";
+        PF_E_Rate.disabled = "disabled";
+        // PF_MemNo.value = "";
+        // PF_EnterDate.value = "";
+        // PF_E_Rate.value = "";
+    }
+}
+function SP_Moth_Red_F_create_function() {
+    var SP_Moth_Red_F = document.getElementById("SP_Moth_Red_F_create");
+    var SP_Moth_ID = document.getElementById("SP_Moth_ID_create");
+    if (SP_Moth_Red_F.checked == true){
+        SP_Moth_ID.disabled = "";
+    } else {
+        SP_Moth_ID.disabled = "disabled";
+        // PF_MemNo.value = "";
+        // PF_EnterDate.value = "";
+        // PF_E_Rate.value = "";
+    }
+}
+function SP_Moth_Red_F_function() {
+    var SP_Moth_Red_F = document.getElementById("SP_Moth_Red_F");
+    var SP_Moth_ID = document.getElementById("SP_Moth_ID");
+    if (SP_Moth_Red_F.checked == true){
+        SP_Moth_ID.disabled = "";
+    } else {
+        SP_Moth_ID.disabled = "disabled";
+        // PF_MemNo.value = "";
+        // PF_EnterDate.value = "";
+        // PF_E_Rate.value = "";
+    }
+}
+function SP_Fath_Red_F_create_function() {
+    var SP_Fath_Red_F = document.getElementById("SP_Fath_Red_F_create");
+    var SP_Fath_ID = document.getElementById("SP_Fath_ID_create");
+    if (SP_Fath_Red_F.checked == true){
+        SP_Fath_ID.disabled = "";
+    } else {
+        SP_Fath_ID.disabled = "disabled";
+        // PF_MemNo.value = "";
+        // PF_EnterDate.value = "";
+        // PF_E_Rate.value = "";
+    }
+}
+function SP_Fath_Red_F_function() {
+    var SP_Fath_Red_F = document.getElementById("SP_Fath_Red_F");
+    var SP_Fath_ID = document.getElementById("SP_Fath_ID");
+    if (SP_Fath_Red_F.checked == true){
+        SP_Fath_ID.disabled = "";
+    } else {
+        SP_Fath_ID.disabled = "disabled";
+        // PF_MemNo.value = "";
+        // PF_EnterDate.value = "";
+        // PF_E_Rate.value = "";
+    }
+}
+function ProbFlag_Function() {
+    var ProbFlag = document.getElementById("ProbFlag");
+    var ProbDate = document.getElementById("ProbDate");
+    var ResignDate = document.getElementById("ResignDate");
+    if (ProbFlag.checked == true){
+        ProbDate.disabled = "";
+        ResignDate.disabled = "";
+    } else {
+        ProbDate.disabled = "disabled";
+        ResignDate.disabled = "disabled";
+        // PF_MemNo.value = "";
+        // PF_EnterDate.value = "";
+        // PF_E_Rate.value = "";
+    }
+}
+
+</script>
 

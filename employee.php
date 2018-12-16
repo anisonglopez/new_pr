@@ -22,7 +22,7 @@ function getAge($birthday) {
         <div class="row">
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-                <h1>Employee</h1>
+                <h1>พนักงาน</h1>
             <hr>
             
             <div class="row">
@@ -47,11 +47,11 @@ function getAge($birthday) {
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-                                    <th scope="col">Emp ID</th>
-                                    <th scope="col">Employee Type</th>
-                                    <th scope="col">Name - Lastname</th>
-                                    <th scope="col">Department</th>
-                                    <th scope="col">Position</th>
+                                    <th scope="col">รหัสพนักงาน</th>
+                                    <th scope="col">ประเภทพนักงาน</th>
+                                    <th scope="col">ชื่อ-นามสกุล</th>
+                                    <th scope="col">แผนก/หน่วยงาน</th>
+                                    <th scope="col">ตำแหน่งงาน</th>
                                     <th scope="col">อายุ</th>
                                     <th scope="col">เงินเดือน</th>
                                     <th scope="col" style="text-align: center;">Action</th>
