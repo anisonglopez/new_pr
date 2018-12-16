@@ -28,7 +28,7 @@ if(isset($_GET["id"])) {
     <div class="row">
     <div class="col-md-6">
                           <dl class="row">
-                              <dt class="col-sm-4 info-box-label">Employee Name : <span class="field-required">*</span></dt>
+                              <dt class="col-sm-4 info-box-label">พนักงาน : <span class="field-required">*</span></dt>
                               <dd class="col-sm-8 info-box-label">  
                               <input name="EmplTName" type="text" id="EmplTName" class="form-control" required placeholder="ระบุพนักงาน" value="'.$EmplTName.'" disabled />
               <input name="EmplCode" type="hidden" id="EmplCode" value="" />

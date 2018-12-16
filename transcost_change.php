@@ -24,7 +24,7 @@ $output = "";
     <div class="row">
     <div class="col-md-6">
         <dl class="row">
-            <dt class="col-sm-4 info-box-label">Employee Name : <span class="field-required">*</span></dt>
+            <dt class="col-sm-4 info-box-label">พนักงาน : <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">  
             <input  type="text" id="show_emp_name"  class="form-control" placeholder="ระบุพนักงาน" value="'.$EmplTName.'" disabled />
 ';

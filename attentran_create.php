@@ -32,7 +32,7 @@ if($_SESSION['UserID'] == "")
       <div class="row">
       <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">Employee Name : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-4 info-box-label">พนักงาน : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-8 info-box-label">  
                                 <!-- <input name="show_emp_name" type="text" id="show_emp_name"  class="form-control" placeholder="ระบุพนักงาน"/> -->
                                 <!-- <input name="EmplCode" type="text" id="EmplCode" value="" class="form-control"  placeholder="ระบุพนักงาน"/> -->
