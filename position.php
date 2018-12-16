@@ -18,7 +18,7 @@ $DATA = mysqli_query($conn, $sql);
 
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-                <h1>Position</h1>
+                <h1>ตำแหน่งงาน</h1>
             <hr>
             
           
@@ -36,8 +36,8 @@ $DATA = mysqli_query($conn, $sql);
                                 <thead>
                                     <tr>
                                     <th scope="col">Position No </th>
-                                    <th scope="col">Position Name (EN)</th>
-                                    <th scope="col">Position Name (TH)</th>                          
+                                    <th scope="col">ตำแหน่ง (ENG)</th>
+                                    <th scope="col">ตำแหน่ง (TH))</th>                          
                                     <th scope="col">เบี้ยเลี้ยง/วัน(เช้า)</th>
                                     <th scope="col">เบี้ยเลี้ยง/วัน(บ่าย)</th>
                                     <th scope="col">เบี้ยเลี้ยง/วัน(เย็น)</th>
@@ -59,9 +59,9 @@ $DATA = mysqli_query($conn, $sql);
                                 <td><?php echo $PosiCode; ?></td>
                                 <td><?php echo $row1; ?></td>
                                 <td><?php echo $row2; ?></td>                   
-                                <td><?php echo $row4; ?></td>
-                                <td><?php echo $row5; ?></td>
-                                <td><?php echo $row6; ?></td>
+                                <td style="text-align: center;"><?php echo $row4; ?></td>
+                                <td style="text-align: center;"><?php echo $row5; ?></td>
+                                <td style="text-align: center;"><?php echo $row6; ?></td>
                                 <td>
                                 <center>
                                 <a href="position_change.php?PosiCode=<?php echo $PosiCode?>">
