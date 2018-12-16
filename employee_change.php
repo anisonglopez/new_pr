@@ -770,7 +770,7 @@ $output = "";
         <div class="row">
 <!-- Blog Entries Column -->
 <div class="col-md-12">
-            <h1>Change Employee</h1>
+            <h1>แก้ไขพนักงาน</h1>
             <hr>
             <div class="row">
             <div class="col-lg-12">
