@@ -18,16 +18,18 @@ if(isset($_GET["id"])) {
         $ConvertPeriodDate = date("Ym", strtotime($Period_date));
         if ($rows["EmplType"] == M){
             $EmplString = "รายเดือน";
+            $display = "display:show;";
         }
         else
         {
             $EmplString = "รายวัน";
+            $display = "display:none;";
         }
     $output .= '<input type="hidden" name="id" value="'.$_GET["id"].'">
     <div class="row">
     <div class="col-md-6">
         <dl class="row">
-            <dt class="col-sm-4 info-box-label">Period : <span class="field-required">*</span></dt>
+            <dt class="col-sm-4 info-box-label">ประจำงวด : <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">
             <input name="period" type="text" value="'.$rows["Period"].'" data-placement="top" required  class="form-control"  disabled/ >      
             </dd>
@@ -53,7 +55,7 @@ if(isset($_GET["id"])) {
     <dl class="row">
             <dt class="col-sm-4 info-box-label">ประเภทพนักงาน : <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">
-            <select class="form-control"  name="emp_type" required disabled>
+            <select class="form-control"  name="emp_type" required disabled   id="emp_type">
             <option value="'.$rows["EmplType"].'">'.$EmplString.'</option>   
             <option value="D">Daily Employee</option>
             <option value="M">Monthly Employee</option>
@@ -81,11 +83,11 @@ if(isset($_GET["id"])) {
                         <div class="row">
                         <div class="col-md-12">
         <dl class="row">
-            <dt class="col-sm-3 info-box-label">Salary Date from : <span class="field-required">*</span></dt>
+            <dt class="col-sm-3 info-box-label">วันที่เริ่มคิดค่าจ้างจาก : <span class="field-required">*</span></dt>
             <dd class="col-sm-3 info-box-label">
             <input name="salary_date_from" value="'.$rows["FmAttnDate"].'" type="date" data-placement="top" required  class="form-control" disabled/ >      
             </dd>
-            <dt class="col-sm-1 info-box-label">To : <span class="field-required">*</span></dt>
+            <dt class="col-sm-1 info-box-label">ถึง : <span class="field-required">*</span></dt>
             <dd class="col-sm-3 info-box-label">
             <input name="salary_date_to" type="date" value="'.$rows["ToAttnDate"].'" data-placement="top" required  class="form-control" disabled/ >      
             </dd>
@@ -94,11 +96,11 @@ if(isset($_GET["id"])) {
     </div>
     <div class="col-md-12">
         <dl class="row">
-            <dt class="col-sm-3 info-box-label">Overtime Date from : <span class="field-required">*</span></dt>
+            <dt class="col-sm-3 info-box-label">วันที่เริ่มคิด OT จาก : <span class="field-required">*</span></dt>
             <dd class="col-sm-3 info-box-label">
             <input name="overtime_date_from"  value="'.$rows["FmOVTDate"].'" type="date" data-placement="top" required  class="form-control" disabled/ >      
             </dd>
-            <dt class="col-sm-1 info-box-label">To : <span class="field-required">*</span></dt>
+            <dt class="col-sm-1 info-box-label">ถึง : <span class="field-required">*</span></dt>
             <dd class="col-sm-3 info-box-label">
             <input name="overtime_date_to"  value="'.$rows["ToOVTDate"].'" type="date" data-placement="top" required  class="form-control" disabled / >      
             </dd>
@@ -107,11 +109,11 @@ if(isset($_GET["id"])) {
     </div>
     <div class="col-md-12">
         <dl class="row">
-            <dt class="col-sm-3 info-box-label">Lev-Late-Shif Date from : <span class="field-required">*</span></dt>
+            <dt class="col-sm-3 info-box-label">วันที่เริ่มคิดขาด ลา มาสาย เวลาเข้ากะ : <span class="field-required">*</span></dt>
             <dd class="col-sm-3 info-box-label">
             <input name="lev_date_from" type="date" value="'.$rows["FmLevDate"].'" data-placement="top" required  class="form-control" disabled/ >      
             </dd>
-            <dt class="col-sm-1 info-box-label">To : <span class="field-required">*</span></dt>
+            <dt class="col-sm-1 info-box-label">ถึง : <span class="field-required">*</span></dt>
             <dd class="col-sm-3 info-box-label">
             <input name="lev_date_to" type="date" value="'.$rows["ToLevDate"].'"  data-placement="top" required  class="form-control" disabled / >      
             </dd>
@@ -121,6 +123,19 @@ if(isset($_GET["id"])) {
                         </div>
                     </div>
                 </div>
+                <div class="col-md-12" id="Holiday" style="'.$display.'">
+                <dl class="row">
+                    <dt class="col-sm-3 info-box-label">วันหยุดของบริษัท (วัน) : </dt>
+                    <dd class="col-sm-3 info-box-label">
+                    <input name="Holiday" type="number" min="0" class="form-control" value="'.$rows["Holiday"].'"/ >      
+                    </dd>
+                    <dt class="col-sm-1 info-box-label"></dt>
+                    <dd class="col-sm-3 info-box-label">
+                  
+                    </dd>
+                    <dd class="col-sm-2 info-box-label"></dd>
+                   </dl>
+            </div>
 <!-- ///////////////////////////////Period Control///////////////////////////////////////// -->                         
 <!--END-->
 
@@ -147,7 +162,7 @@ if(isset($_GET["id"])) {
                         </a>    
                         <button type="submit" class="btn btn-success">อัปเดตข้อมูล </button>
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body" onload="Holiday_Function()">
                     <?php  echo $output;?>
                     </div>
                 </form>
@@ -157,5 +172,4 @@ if(isset($_GET["id"])) {
 <!-- /.row -->
 
 <?php include("includes/footer.php"); ?>
-
 

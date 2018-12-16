@@ -19,7 +19,7 @@
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                               <li><a href="systemcon.php">จัดเตรียมข้อมูลก่อนระมวลผล</a></li>
-                              <li><a href="#">ประมวลผลค่าจ้างประจำรอบ</a></li>
+                              <li><a href="monthlyclosingprocress.php">ประมวลผลค่าจ้างประจำรอบ</a></li>
                             </ul>
                           </li>
                     </li>
@@ -28,7 +28,7 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Time Sheet
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="attentran.php">ประวัติการลา</a></li>
+          <li><a href="attentran.php">ประวัติการลงเวลา</a></li>
           <li><a href="overtime.php">รายการทำงานล่วงเวลา</a></li>
         </ul>
       </li>

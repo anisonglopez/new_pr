@@ -13,7 +13,8 @@ if(isset($_POST["update"]))  {
     date_default_timezone_set("Asia/Bangkok");
     $date = date('Y-m-d H:i:s');
     $strSQL = "UPDATE tm00_control ";
-    $strSQL .= "SET PayDate = '".($_POST["paydate"])."'";
+    $strSQL .= "SET PayDate = '".($_POST["paydate"])."',
+    Holiday = '".($_POST["Holiday"])."'";
     $strSQL .="WHERE auto_increment = '".$_POST["id"]."'";
     $objQuery = mysqli_query($conn, $strSQL);    
          if($objQuery)

@@ -21,7 +21,7 @@ $DATA = mysqli_query($conn, $sql);
 
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-                <h1>ประวัติการลา</h1>
+                <h1>ประวัติการลงเวลา</h1>
             <hr>
             
           

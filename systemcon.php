@@ -35,12 +35,12 @@ $DATA = mysqli_query($conn, $sql);
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-                                    <th scope="col">Period</th>
-                                    <th scope="col">Trem</th>
-                                    <th scope="col">Emp Type</th>
-                                    <th scope="col">Salary Date from</th>
-                                    <th scope="col">Salary Date to</th>
-                                    <th scope="col">Payment Date</th>
+                                    <th scope="col">ประจำงวด</th>
+                                    <th scope="col" style="text-align : center;">รอบ</th>
+                                    <th scope="col" style="text-align : center;">ประเภทพนักงาน</th>
+                                    <th scope="col" style="text-align : center;">วันที่เริ่มคิดค่าจ้าง</th>
+                                    <th scope="col" style="text-align : center;">ถึง</th>
+                                    <th scope="col" style="text-align : center;">วันที่จ่าย</th>
                                     <th scope="col" style="text-align: center;">Action</th>
                                     </tr>
                                 </thead>
@@ -60,6 +60,12 @@ $DATA = mysqli_query($conn, $sql);
     else{
       $row3 = "รายเดือน";
     }
+    if ($row6 == "0000-00-00"){
+        $row6  = "";
+    }
+    else{
+        $row6 = date("d/m/Y", strtotime($row6));
+    }
   ?>
                                 <tr>
                                 <td><?php echo $row1; ?></td>
@@ -67,7 +73,7 @@ $DATA = mysqli_query($conn, $sql);
                                 <td style="text-align: center;"><?php echo $row3; ?></td>
                                 <td style="text-align: center;"><?php echo date("d/m/Y", strtotime($row4));?></td>
                                 <td style="text-align: center;"><?php echo date("d/m/Y", strtotime($row5)); ?></td>
-                                <td style="text-align: center;"><?php echo date("d/m/Y", strtotime($row6));?></td>
+                                <td style="text-align: center;"><?php echo $row6?></td>
                                 <td>
                                 <center>
                                 <a href="systemcon_change.php?id=<?php echo $id?>">
@@ -92,7 +98,8 @@ $DATA = mysqli_query($conn, $sql);
 <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
-            responsive: true
+            responsive: true,
+            "order": [[ 0, "desc" ]]
         });
     });
     </script>

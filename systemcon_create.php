@@ -34,7 +34,7 @@ if($_SESSION['UserID'] == "")
       <div class="row">
       <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">Period : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-4 info-box-label">ประจำงวด : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="period" type="month" data-placement="top" required  class="form-control" placeholder="ระบุ Username"  maxlength="20" title="กรุณาระบุชื่อผู้ใช้งานเป็นภาษาอังกฤษ" pattern="\w+"/ >      
                                 </dd>
@@ -44,7 +44,11 @@ if($_SESSION['UserID'] == "")
                             <dl class="row">
                                 <dt class="col-sm-4 info-box-label">รอบ : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-8 info-box-label">
-                                <input name="term" type="number" data-placement="top" required  class="form-control"placeholder="ระบุรอบที่จ่าย" min="1" max="3" maxlength="1"  pattern="\w+"  title="ระบุรหัสผ่านเป็นภาษาอังกฤษ 6 - 10 ตัวอักษร"/>
+                                <select class="form-control"  name="term" required onchange="SP_Moth_Red_F_create_function()">
+                                <option value="">Select</option>   
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                </select>   
                                 </dd>
                             </dl>
                         </div>
@@ -60,7 +64,7 @@ if($_SESSION['UserID'] == "")
                         <dl class="row">
                                 <dt class="col-sm-4 info-box-label">ประเภทพนักงาน : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-8 info-box-label">
-                                <select class="form-control"  name="emp_type" required>
+                                <select class="form-control"  name="EmplType" required onchange="Holiday_Function()" id="emp_type">
                                 <option value="">Select</option>   
                                 <option value="D">รายวัน</option>
                                 <option value="M">รายเดือน</option>
@@ -75,7 +79,7 @@ if($_SESSION['UserID'] == "")
                             <div class="title-header-info-box add-pad">
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active " data-toggle="tab" href="#tab1" id="tabspecification" role="tab">Period</a>
+                                        <a class="nav-link active " data-toggle="tab" href="#tab1" id="tabspecification" role="tab">รายละเอียดการเปิดรอบการคำนวณ</a>
                                     </li>
                                 </ul>
                             </div>
@@ -88,11 +92,11 @@ if($_SESSION['UserID'] == "")
                                             <div class="row">
                                             <div class="col-md-12">
                             <dl class="row">
-                                <dt class="col-sm-3 info-box-label">Salary Date from : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-3 info-box-label">วันที่เริ่มคิดค่าจ้างจาก : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-3 info-box-label">
                                 <input name="salary_date_from" type="date" data-placement="top" required  class="form-control"/ >      
                                 </dd>
-                                <dt class="col-sm-1 info-box-label">To : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-1 info-box-label">ถึง : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-3 info-box-label">
                                 <input name="salary_date_to" type="date" data-placement="top" required  class="form-control"/ >      
                                 </dd>
@@ -101,11 +105,11 @@ if($_SESSION['UserID'] == "")
                         </div>
                         <div class="col-md-12">
                             <dl class="row">
-                                <dt class="col-sm-3 info-box-label">Overtime Date from : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-3 info-box-label">วันที่เริ่มคิด OT จาก : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-3 info-box-label">
                                 <input name="overtime_date_from" type="date" data-placement="top" required  class="form-control"/ >      
                                 </dd>
-                                <dt class="col-sm-1 info-box-label">To : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-1 info-box-label">ถึง : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-3 info-box-label">
                                 <input name="overtime_date_to" type="date" data-placement="top" required  class="form-control" / >      
                                 </dd>
@@ -114,13 +118,27 @@ if($_SESSION['UserID'] == "")
                         </div>
                         <div class="col-md-12">
                             <dl class="row">
-                                <dt class="col-sm-3 info-box-label">Lev-Late-Shif Date from : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-3 info-box-label">วันที่เริ่มคิดขาด ลา มาสาย เวลาเข้ากะ : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-3 info-box-label">
                                 <input name="lev_date_from" type="date" data-placement="top" required  class="form-control"/ >      
                                 </dd>
-                                <dt class="col-sm-1 info-box-label">To : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-1 info-box-label">ถึง : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-3 info-box-label">
                                 <input name="lev_date_to" type="date" data-placement="top" required  class="form-control" / >      
+                                </dd>
+                                <dd class="col-sm-2 info-box-label"></dd>
+                               </dl>
+                        </div>
+
+                        <div class="col-md-12" id="Holiday" style="display: none;">
+                            <dl class="row">
+                                <dt class="col-sm-3 info-box-label">วันหยุดของบริษัท (วัน) : </dt>
+                                <dd class="col-sm-3 info-box-label">
+                                <input name="Holiday" type="number" min="0" class="form-control"/ >      
+                                </dd>
+                                <dt class="col-sm-1 info-box-label"></dt>
+                                <dd class="col-sm-3 info-box-label">
+                              
                                 </dd>
                                 <dd class="col-sm-2 info-box-label"></dd>
                                </dl>
@@ -142,3 +160,14 @@ if($_SESSION['UserID'] == "")
             <!-- Blog Sidebar Widgets Column -->
 
         <?php include("includes/footer.php"); ?>
+<script>
+function Holiday_Function() {
+    var empltype = document.getElementById("emp_type").value;
+    if (empltype == "M"){
+        document.getElementById("Holiday").style.display = 'block';
+    }
+    else{
+        document.getElementById("Holiday").style.display = 'none';
+    }
+}
+</script>

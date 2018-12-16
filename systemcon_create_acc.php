@@ -16,12 +16,12 @@ if(isset($_POST["create"])) {
     $date = date('Y-m-d H:i:s');
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $strSQL = "INSERT INTO tm00_control ";
-    $strSQL .="(Period, Term, EmplType, FmAttnDate, ToAttnDate, FmOVTDate, ToOVTDate, FmLevDate, ToLevDate,  PayDate, SysUpdDate, SysUserID, SysPgmID) ";
+    $strSQL .="(Period, Term, EmplType, FmAttnDate, ToAttnDate, FmOVTDate, ToOVTDate, FmLevDate, ToLevDate,  PayDate, SysUpdDate, SysUserID, SysPgmID, Holiday) ";
     $strSQL .="VALUES ";
-    $strSQL .="('".$ConvertPeriodDate."', '".($_POST["term"])."', '".mysqli_real_escape_string($_POST["emp_type"])."',
+    $strSQL .="('".$ConvertPeriodDate."', '".($_POST["term"])."', '".($_POST["EmplType"])."',
  '".($_POST["salary_date_from"])."', '".($_POST["salary_date_to"])."', '".($_POST["overtime_date_from"])."', '".($_POST["overtime_date_to"])."', 
  '".($_POST["lev_date_from"])."', '".($_POST["lev_date_to"])."', '".($_POST["paydate"])."', 
- '".$date. "' , '" .$_POST["user_login"]."' , '".$SysPgmID."')";
+ '".$date. "' , '" .$_POST["user_login"]."' , '".$SysPgmID."' , '".$_POST["Holiday"]."')";
     //$strSQL .="('".mysqli_real_escape_string($_POST["period"])."', '"($_POST["term"])."', '".mysqli_real_escape_string($_POST["emp_type"])."', '".($_POST["salary_date_from"])."', '".$_POST["salary_date_to"]. "' , '" .$_POST["overtime_date_from"]."' ,'" .$_POST["overtime_date_to"]."' , '" .$_POST["user_login"]."' , 'FM01_User' )";
     $objQuery = mysqli_query($conn, $strSQL);
     if($objQuery)
