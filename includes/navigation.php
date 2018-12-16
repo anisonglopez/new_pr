@@ -29,7 +29,7 @@
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="attentran.php">ประวัติการลา</a></li>
-          <li><a href="#">รายการทำงานล่วงเวลา</a></li>
+          <li><a href="overtime.php">รายการทำงานล่วงเวลา</a></li>
         </ul>
       </li>
                        <!-- รายได้ - รายการหัก -->
