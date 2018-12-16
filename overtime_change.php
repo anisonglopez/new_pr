@@ -31,7 +31,7 @@ if(isset($_GET["id"])) {
 </div>
 <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">วันที่ : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-4 info-box-label">วันที่คิดโอที : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input type="date" name="AttnDate"  class="form-control" required value="'.$rows["AttnDate"].'"/>
                                 </dd>
@@ -39,7 +39,7 @@ if(isset($_GET["id"])) {
                         </div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">OVT10 : </dt>
+                                <dt class="col-sm-4 info-box-label">1.0 : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="OVT10" type="number" data-placement="top"  class="form-control"  min="0"  maxlength="20" value="'.$rows["OVT10"].'"/>   
                                 </dd>
@@ -47,7 +47,7 @@ if(isset($_GET["id"])) {
                         </div>  
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">OVT15 : </dt>
+                                <dt class="col-sm-4 info-box-label">1.5 : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="OVT15" type="number" data-placement="top"  class="form-control"  min="0"  maxlength="20" value="'.$rows["OVT15"].'"/>   
                                 </dd>
@@ -55,7 +55,7 @@ if(isset($_GET["id"])) {
                         </div>  
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">OVT20 : </dt>
+                                <dt class="col-sm-4 info-box-label">2.0 : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="OVT20" type="number" data-placement="top"  class="form-control"  min="0"  maxlength="20" value="'.$rows["OVT20"].'"/>   
                                 </dd>
@@ -63,7 +63,7 @@ if(isset($_GET["id"])) {
                         </div>  
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">OVT25 : </dt>
+                                <dt class="col-sm-4 info-box-label">2.5 : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="OVT25" type="number" data-placement="top"  class="form-control"  min="0"  maxlength="20" value="'.$rows["OVT25"].'"/>   
                                 </dd>
@@ -71,7 +71,7 @@ if(isset($_GET["id"])) {
                         </div>  
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">OVT30 : </dt>
+                                <dt class="col-sm-4 info-box-label">3.0 : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="OVT30" type="number" data-placement="top"  class="form-control"  min="0"  maxlength="20" value="'.$rows["OVT30"].'"/>   
                                 </dd>

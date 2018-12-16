@@ -39,12 +39,12 @@ $DATA = mysqli_query($conn, $sql);
                                     <th scope="col">วันที่</th>
                                     <th scope="col">รหัสพนักงาน</th>
                                     <th scope="col">ชื่อพนักงาน</th>
-                                    <th scope="col">ประเภทพนักงาน</th>
-                                    <th scope="col">OVT10</th>
-                                    <th scope="col">OVT15</th>
-                                    <th scope="col">OVT20</th>
-                                    <th scope="col">OVT25</th>
-                                    <th scope="col">OVT30</th>
+                                    <th scope="col" style="text-align: center;">ประเภทพนักงาน</th>
+                                    <th scope="col" style="text-align: center;">1.0</th>
+                                    <th scope="col" style="text-align: center;">1.5</th>
+                                    <th scope="col" style="text-align: center;">2.0</th>
+                                    <th scope="col" style="text-align: center;">2.5</th>
+                                    <th scope="col" style="text-align: center;">3.0</th>
                                     <th scope="col" style="text-align: center;">Action</th>
                                     </tr>
                                 </thead>
@@ -78,12 +78,12 @@ $DATA = mysqli_query($conn, $sql);
                                 <td><span class='hide'><?php echo $Sort_Attndate; ?></span><?php echo $AttnDate; ?></td>
                                 <td style="text-align: center;"><?php echo $EmplCode; ?></td>
                                 <td><?php echo $EmplTName; ?></td>
-                                <td><?php echo $EmplType; ?></td>
-                                <td><?php echo $OVT10; ?></td>
-                                <td><?php echo $OVT15 ; ?></td>
-                                <td><?php echo $OVT20; ?></td>
-                                <td><?php echo $OVT25; ?></td>
-                                <td><?php echo $OVT30; ?></td>
+                                <td style="text-align: center;"><?php echo $EmplType; ?></td>
+                                <td style="text-align: center;"><?php echo $OVT10; ?></td>
+                                <td style="text-align: center;"><?php echo $OVT15 ; ?></td>
+                                <td style="text-align: center;"><?php echo $OVT20; ?></td>
+                                <td style="text-align: center;"><?php echo $OVT25; ?></td>
+                                <td style="text-align: center;"><?php echo $OVT30; ?></td>
                                 <td>
                                 <center>
                                 <a href="overtime_change.php?id=<?php echo $id?>">
