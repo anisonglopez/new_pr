@@ -58,25 +58,27 @@ if($_SESSION['UserID'] == "")
           </dl>
         </div>
 
-				<div class="col-md-12">
+<div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">อัตราหัก : </dt>
-            <dd class="col-sm-2 info-box-label">
-						<input name="Ded_Rate" type="number" data-placement="top"  class="form-control"  min="0" maxlength="20"/>   
-            </dd>
-          </dl>
-        </div>
-        <div class="col-md-12">
-          <dl class="row">
-            <dt class="col-sm-2 info-box-label">Deduct Flag : </dt>
+            <dt class="col-sm-2 info-box-label">หักเงิน : </dt>
             <dd class="col-sm-8 ">
             <div class="material-switch ">
-               <input id="Ded_Flag" name="Ded_Flag" type="checkbox" value="1"/>
+               <input id="Ded_Flag" name="Ded_Flag" type="checkbox" value="1" onchange="Ded_Flag_Func()"/>
                 <label for="Ded_Flag" class="label-success"></label>
             </div>
             </dd>
           </dl>
         </div>      
+
+				<div class="col-md-12">
+          <dl class="row">
+            <dt class="col-sm-2 info-box-label">อัตราหัก (%) : </dt>
+            <dd class="col-sm-2 info-box-label">
+						<input  id="Ded_Rate" name="Ded_Rate" type="number" data-placement="top"  class="form-control"  min="0" max="100" value="0" disabled/>   
+            </dd>
+          </dl>
+        </div>
+        
         <!-- สุด div -->
                     </div>
                     </div>
@@ -96,3 +98,20 @@ if($_SESSION['UserID'] == "")
             <!-- Blog Sidebar Widgets Column -->
 
         <?php include("includes/footer.php"); ?>
+<script>
+  function Ded_Flag_Func() {
+    var Ded_Flag = document.getElementById("Ded_Flag");
+    var Ded_Rate = document.getElementById("Ded_Rate");
+    if (Ded_Flag.checked == true){
+        Ded_Rate.disabled = "";
+        Ded_Rate.value = "100";
+
+    } else {
+      Ded_Rate.disabled = "disabled";
+      Ded_Rate.value = "0";
+        // PF_MemNo.value = "";
+        // PF_EnterDate.value = "";
+        // PF_E_Rate.value = "";
+    }
+}
+</script>
