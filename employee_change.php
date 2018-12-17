@@ -337,7 +337,7 @@ $output = "";
                     <dl class="row">
                       <dt class="col-sm-3 info-box-label">เงื่อนไขภาษี : <span class="field-required">*</span></dt>
                       <dd class="col-sm-3">
-                        <input   type="radio" name="TaxCond" value="C" required '.$TaxCondCSe.'> บริษัทจ่ายเอง &nbsp;&nbsp; 
+                        <input   type="radio" name="TaxCond" value="C" required '.$TaxCondCSe.'> บริษัทจ่าย &nbsp;&nbsp; 
                         <input type="radio" name="TaxCond" value="E" required '.$TaxCondESe.'> พนักงานจ่ายเอง
                       </dd>
                       <dt class="col-sm-2 info-box-label"></dt>
