@@ -32,7 +32,7 @@ function getAge($birthday) {
                         <a href="employee_create.php">
                         <button type="button" class="btn btn-success">คลิกเพื่อสร้างพนักงานใหม่ </button>
                         </a>
-                        <a href="employee_import.php">
+                        <!-- <a href="employee_import.php">
                         <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-import" aria-hidden="true"></span> Import Data </button>
                         </a>
                         <a href="employee_create.php">
@@ -40,7 +40,7 @@ function getAge($birthday) {
                         </a>
                         <a href="employee_create.php">
                         <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> </button>
-                        </a>
+                        </a> -->
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">

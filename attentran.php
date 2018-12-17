@@ -22,7 +22,7 @@ if($_SESSION['UserID'] == "")
                         <a href="attentran_create.php">
                         <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> สร้างใหม่</button>
                         </a>
-                        <button class="btn btn-success" data-toggle="modal" data-target="#modal_import">Import</button>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#modal_import"><span class="glyphicon glyphicon-import" aria-hidden="true"></span>Import Data</button>
                         <a href="file_import/attendance_file_import.csv" download>
                         <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> ดาวน์โหลดไฟล์นำเข้า</button>
                         </a>
