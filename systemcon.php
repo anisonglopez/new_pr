@@ -99,7 +99,7 @@ $DATA = mysqli_query($conn, $sql);
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
             responsive: true,
-            "order": [[ 0, "desc" ]]
+            "order": [[ 0, "desc" ], [ 1, 'desc' ]]
         });
     });
     </script>
