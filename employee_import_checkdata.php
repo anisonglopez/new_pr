@@ -1,5 +1,5 @@
 <?php
- if(isset($_POST["file_data"])){
+ if(isset($_POST["file"])){
      echo "hello";
 		$filename=$_FILES["file"]["tmp_name"];		
         $row = 0;

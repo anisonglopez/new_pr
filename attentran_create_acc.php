@@ -36,11 +36,11 @@ if($_SESSION['UserID'] == "")
     }
     else
     {
-        $result = 'ขออภัย! เนื่องจากมีรหัสธนาคาร นี้แล้วในระบบ ไม่สามารถทำการบันทึกข้อมูลได้';
+        $result = 'ขออภัย!  ไม่สามารถทำการบันทึกข้อมูลได้';
         //header("Location: " . $_SERVER['REQUEST_URI']);
        // header("location: ../../user.php");
     }
-    echo $strSQL;
+
     }
 }
 ?>

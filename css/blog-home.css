@@ -77,3 +77,6 @@ footer {
   .hide {
     display:none; 
 }
+.modal-header .close {
+  margin-top: -20px;
+}
