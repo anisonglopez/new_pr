@@ -35,7 +35,7 @@ $DATA = mysqli_query($conn, $sql);
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-                                    <th scope="col">Position No </th>
+                                    <th scope="col">รหัสตำแหน่ง </th>
                                     <th scope="col">ตำแหน่ง (ENG)</th>
                                     <th scope="col">ตำแหน่ง (TH))</th>                          
                                     <th scope="col">เบี้ยเลี้ยง/วัน(เช้า)</th>
