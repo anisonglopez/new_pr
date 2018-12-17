@@ -134,7 +134,7 @@ if($_SESSION['UserID'] == "")
                             <dl class="row">
                                 <dt class="col-sm-3 info-box-label">วันหยุดของบริษัท (วัน) : </dt>
                                 <dd class="col-sm-3 info-box-label">
-                                <input name="Holiday" type="number" min="0" class="form-control"/ >      
+                                <input name="Holiday" type="number" min="0" class="form-control" value="0"/ >      
                                 </dd>
                                 <dt class="col-sm-1 info-box-label"></dt>
                                 <dd class="col-sm-3 info-box-label">
@@ -163,8 +163,9 @@ if($_SESSION['UserID'] == "")
 <script>
 function Holiday_Function() {
     var empltype = document.getElementById("emp_type").value;
-    if (empltype == "M"){
+    if (empltype == "D"){
         document.getElementById("Holiday").style.display = 'block';
+        
     }
     else{
         document.getElementById("Holiday").style.display = 'none';

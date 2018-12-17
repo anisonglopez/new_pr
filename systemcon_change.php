@@ -18,12 +18,12 @@ if(isset($_GET["id"])) {
         $ConvertPeriodDate = date("Ym", strtotime($Period_date));
         if ($rows["EmplType"] == M){
             $EmplString = "รายเดือน";
-            $display = "display:show;";
+            $display = "display:none;";
         }
         else
         {
             $EmplString = "รายวัน";
-            $display = "display:none;";
+            $display = "display:show;";
         }
     $output .= '<input type="hidden" name="id" value="'.$_GET["id"].'">
     <div class="row">
