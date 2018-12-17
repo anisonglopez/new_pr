@@ -151,15 +151,13 @@ if($_SESSION['UserID'] == "")
 
 <?php 	    
  }
- 
+ else{
+    $error_flag = 1;
+ }
  $row++;     
 } 
-$error_flag = 1;
+
 fclose($file);	
-}else
-{
-    $error_flag = 1;
-  
 }
 ?>                     
                                 </tbody>
