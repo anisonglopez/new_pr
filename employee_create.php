@@ -589,14 +589,14 @@ if($_SESSION['UserID'] == "")
                     </div>
                     <div class="col-md-12">
                       <dl class="row">
-                        <dt class="col-sm-3 info-box-label">Overtime Flag : </dt>
+                        <dt class="col-sm-3 info-box-label">คำนวณโอที : </dt>
                         <dd class="col-sm-3"> 
                         <div class="material-switch ">
                <input id="OT_Cal_F" name="OT_Cal_F" type="checkbox" value="1"/>
                 <label for="OT_Cal_F" class="label-success"></label>
                    </div>
                         </dd>
-                        <dt class="col-sm-2 info-box-label">Attendance Flag : </dt>
+                        <dt class="col-sm-2 info-box-label">คำนวณเวลาเข้างาน : </dt>
                         <dd class="col-sm-3">
                                     <div class="material-switch ">
                         <input id="Attn_Cal_F" name="Attn_Cal_F" type="checkbox"value="1"/>

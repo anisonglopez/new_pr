@@ -423,7 +423,7 @@ $output = "";
                                   <option value="แยกกันอยู่" '.$Marital_5.'>แยกกันอยู่</option>
                         </select> 
                       </dd>
-                      <dt class="col-sm-2 info-box-label">หมายเลขสมรถ :</dt>
+                      <dt class="col-sm-2 info-box-label">หมายเลขสมรส :</dt>
                       <dd class="col-sm-3 info-box-label">
                        <input name="MarriageNo" type="text" value="'.$rows["MarriageNo"].'" data-placement="top"   class="form-control"/ >      
                       </dd>
@@ -432,11 +432,11 @@ $output = "";
                   </div>
                   <div class="col-md-12">
                     <dl class="row">
-                     <dt class="col-sm-3 info-box-label">วันที่สมรถ : </dt>
+                     <dt class="col-sm-3 info-box-label">วันที่สมรส : </dt>
                      <dd class="col-sm-3 info-box-label">
                        <input name="MarriagedDate" type="date" value="'.$rows["MarriagedDate"].'" data-placement="top"   class="form-control"/ >      
                      </dd>
-                     <dt class="col-sm-2 info-box-label">ชื่อ-สกุลคู่สมรถ : </dt>
+                     <dt class="col-sm-2 info-box-label">ชื่อ-สกุลคู่สมรส : </dt>
                      <dd class="col-sm-3 info-box-label">
                        <input name="SpouseName" type="text" value="'.$rows["SpouseName"].'" data-placement="top"   class="form-control" / >      
                      </dd>
@@ -694,7 +694,7 @@ $output = "";
               $output.='
               <div class="col-md-12">
                 <dl class="row">
-                  <dt class="col-sm-3 info-box-label">Overtime Flag : </dt>
+                  <dt class="col-sm-3 info-box-label">คำนวณโอที : </dt>
                   <dd class="col-sm-3"> 
                   <div class="material-switch ">
          <input id="OT_Cal_F" name="OT_Cal_F" type="checkbox" '.$checked.' value="1"/>
@@ -703,7 +703,7 @@ $output = "";
                   </dd>';
                   $checked = ($rows['Attn_Cal_F'] == '1') ? "checked" : "";
                   $output.='
-                  <dt class="col-sm-2 info-box-label">Attendance Flag : </dt>
+                  <dt class="col-sm-2 info-box-label">คำนวณเวลาเข้างาน : </dt>
                   <dd class="col-sm-3">
                               <div class="material-switch ">
                   <input id="Attn_Cal_F" name="Attn_Cal_F" type="checkbox" '.$checked .' value="1"/>
