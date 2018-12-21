@@ -12,7 +12,7 @@ if($_SESSION['UserID'] == "")
         <div class="row">
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-            <h1>สร้างข้อมูลการลา</h1>
+            <h1>สร้างข้อมูลการลงเวลา</h1>
             <hr>
             <div class="row">
                 <div class="col-lg-12">
@@ -66,7 +66,7 @@ if($_SESSION['UserID'] == "")
                         </div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">วันที่ลา : </dt>
+                                <dt class="col-sm-4 info-box-label">วันที่ลงเวลา : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input type="date" name="AttnDate" placeholder="ระบุ Count" class="form-control"/>
                                 </dd>
@@ -74,9 +74,9 @@ if($_SESSION['UserID'] == "")
                         </div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">ประเภทการลา : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-4 info-box-label">ประเภทการลา : </dt>
                                 <dd class="col-sm-8 info-box-label">
-                                    <select id="AttnCode" class="form-control"  name="AttnCode" required>
+                                    <select id="AttnCode" class="form-control"  name="AttnCode" >
                                     <option value="">Select</option>   
                                         <?php
                                         $strSQL = "SELECT * FROM tm02_attncode";
@@ -135,7 +135,7 @@ if($_SESSION['UserID'] == "")
                             <dl class="row">
                                 <dt class="col-sm-4 info-box-label">อัตราหัก : </dt>
                                 <dd class="col-sm-8 info-box-label">
-                                <input id="Ded_Rate" name="Ded_Rate" type="number" data-placement="top" required  class="form-control" min="0"  value="0"/>
+                                <input id="Ded_Rate" name="Ded_Rate" type="number" data-placement="top" required  class="form-control" min="0"  value="0" disabled/>
                                 </dd>
                             </dl>
                         </div>     
@@ -186,7 +186,12 @@ if($_SESSION['UserID'] == "")
                             });
                             $( AttnCode ).on( "change", function() { 
                                 var attncode = document.getElementById("AttnCode").value;
-                                $.ajax({  
+                                if (attncode == ""){
+                                document.getElementById("Ded_Flag").checked = false;
+                               document.getElementById("Ded_Rate").value = 0;
+                               Ded_Rate.disabled = "disabled";
+                                }else{
+                                    $.ajax({  
                                             url:"ajax_attncode.php",  
                                                 method:"post",  
                                                 data:{attncode:attncode},  
@@ -195,17 +200,31 @@ if($_SESSION['UserID'] == "")
                                                         if(obj.Ded_Flag == 1){
                                                             document.getElementById("Ded_Flag").checked = true;
                                                             document.getElementById("Ded_Rate").value = obj.Ded_Rate;
+                                                            Ded_Rate.disabled = "";
                                                         }
                                                         else{
                                                             document.getElementById("Ded_Flag").checked = false;
                                                             document.getElementById("Ded_Rate").value = obj.Ded_Rate;
+                                                            Ded_Rate.disabled = "disabled";
                                                         }
                                                 },
                                                 error: function (jqXHR, exception) {
                                                     document.write(exception);
                                                 }
                                         });  
-    
+                                }
+                            });
+                            
+                            $( Ded_Flag ).on( "change", function() { 
+                                var Ded_Flag = document.getElementById("Ded_Flag")
+                                    if(Ded_Flag.checked == true){
+                                        document.getElementById("Ded_Rate").value = 100
+                                        Ded_Rate.disabled = "";
+                                    }
+                                    else{
+                                        document.getElementById("Ded_Rate").value = 0
+                                        Ded_Rate.disabled = "disabled";
+                                    }
                             });
                     });
                    

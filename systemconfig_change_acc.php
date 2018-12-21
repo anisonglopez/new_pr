@@ -230,6 +230,10 @@ date_default_timezone_set("Asia/Bangkok");
         PF_No = '".$_POST["PF_No"]."',
         PF_Comp_No = '".$_POST["PF_Comp_No"]."',
         UMF_R = '".$_POST["UMF_R"]."',
+        SOC_Rate = '".$_POST["SOC_Rate"]."',
+        SOC_MN_Inc = '".$_POST["SOC_MN_Inc"]."',
+        SOC_MX_Inc = '".$_POST["SOC_MX_Inc"]."',
+        SOC_Acc_No = '".$_POST["SOC_Acc_No"]."',
         SysUpdDate = '".$date ."',
         SysUserID = '".$_POST["SysUserID"]."',
         SysPgmID = 'FM01_System_Condition'

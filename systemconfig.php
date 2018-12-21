@@ -138,6 +138,10 @@ $PF_Name = $rows['PF_Name'];
 $PF_No = $rows['PF_No'];
 $PF_Comp_No = $rows['PF_Comp_No'];
 $UMF_R = $rows['UMF_R'];
+$SOC_Rate = $rows['SOC_Rate'];
+$SOC_MN_Inc = $rows['SOC_MN_Inc'];
+$SOC_MX_Inc = $rows['SOC_MX_Inc'];
+$SOC_Acc_No = $rows['SOC_Acc_No'];
 
 
 
@@ -145,7 +149,7 @@ $UMF_R = $rows['UMF_R'];
   //--------------------Select Database----------------------
   }
   ?>
-<h1>System Condition</h1>
+<h1>กำหนดค่าระบบ</h1>
 <hr>
 
 <div class="col-md-12" style="align: right;">
@@ -165,19 +169,19 @@ $UMF_R = $rows['UMF_R'];
                             <div class="title-header-info-box add-pad">
                                 <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item">
-                                        <a class="nav-link active " data-toggle="tab" href="#owner"  role="tab">Owner</a>
+                                        <a class="nav-link active " data-toggle="tab" href="#owner"  role="tab">ข้อมูลบริษัท</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link " data-toggle="tab" href="#address" id="tabspecification" role="tab">Allowance</a>
+                                        <a class="nav-link " data-toggle="tab" href="#address" id="tabspecification" role="tab">ข้อมูลรายได้</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link typeA" data-toggle="tab" href="#communication" id="tabproductpackage" role="tab">Expense</a>
+                                        <a class="nav-link typeA" data-toggle="tab" href="#communication" id="tabproductpackage" role="tab">ข้อมูลการหักเงิน</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#tab6" role="tab">Calculation</a>
+                                        <a class="nav-link" data-toggle="tab" href="#tab6" role="tab">กำหนดค่าการประมวลผล</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#setup" role="tab">Setup</a>
+                                        <a class="nav-link" data-toggle="tab" href="#setup" role="tab">กำหนดค่าระบบ</a>
                                     </li>
                                 </ul>
                             </div>
@@ -198,11 +202,7 @@ $UMF_R = $rows['UMF_R'];
                                 </dd>
                             </dl>
                         </div>
-                        <div class="col-md-6">
-                            <dl class="row">
-                                
-                            </dl>
-                        </div>
+                        <div class="col-md-12"></div>
                         <div class="col-md-6">
                             <dl class="row">
                                 <dt class="col-sm-4 info-box-label">Copy Right : </dt>
@@ -211,6 +211,7 @@ $UMF_R = $rows['UMF_R'];
                                 </dd>
                             </dl>
                         </div>
+                        <div class="col-md-12"><br></div>
                         <div class="col-md-6">
                             <dl class="row">
                                 <dt class="col-sm-4 info-box-label">ชื่อย่อบริษัท : </dt>
@@ -219,6 +220,7 @@ $UMF_R = $rows['UMF_R'];
                                 </dd>
                             </dl>
                         </div>
+                        <div class="col-md-12"></div>
                         <div class="col-md-6">
                             <dl class="row">
                                 <dt class="col-sm-4 info-box-label">ชื่อบริษัท Eng : </dt>
@@ -229,7 +231,7 @@ $UMF_R = $rows['UMF_R'];
                         </div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">ชื่อบริษัท Tha : </dt>
+                                <dt class="col-sm-4 info-box-label">ชื่อบริษัท ไทย : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="Owner_T_Name" type="text" data-placement="top"  class="form-control" value="<?php echo $Owner_T_Name;?>" / >        
                                 </dd>
@@ -267,118 +269,7 @@ $UMF_R = $rows['UMF_R'];
                                 </dd>
                             </dl>
                         </div>
-                        <div class="col-md-6">
-                            <dl class="row">
-                                <dt class="col-sm-4 info-box-label">รอบการคำนวณ(ครั้ง) : </dt>
-                                <dd class="col-sm-8 info-box-label">
-                                <input name="Term_P_M" type="text" data-placement="top"  class="form-control" value="<?php echo $Term_P_M;?>" / >        
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <dl class="row">
-                                <dt class="col-sm-4 info-box-label">วันที่จ่ายครั้งที่ 1 : </dt>
-                                <dd class="col-sm-8 info-box-label">
-                                <input name="PaidDate" type="text" data-placement="top"  class="form-control" value="<?php echo $PaidDate;?>" / >        
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <dl class="row">
-                                <dt class="col-sm-4 info-box-label">วันที่จ่ายครั้งที่ 2 : </dt>
-                                <dd class="col-sm-8 info-box-label">
-                                <input name="PaidDate_2" type="text" data-placement="top"  class="form-control " value="<?php echo $PaidDate_2;?>" / >        
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <dl class="row">
-                                <dt class="col-sm-4 info-box-label">WkHrs_Drv : </dt>
-                                <dd class="col-sm-8 info-box-label">
-                                <input name="WkHrs_Drv" type="text" data-placement="top"  class="form-control"value="<?php echo $WkHrs_Drv;?>" / >        
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <dl class="row">
-                                <dt class="col-sm-4 info-box-label">WkHrs_Empl : </dt>
-                                <dd class="col-sm-8 info-box-label">
-                                <input name="WkHrs_Empl" type="text" data-placement="top"  class="form-control"value="<?php echo $WkHrs_Empl;?>" / >        
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <dl class="row">
-                                <dt class="col-sm-4 info-box-label">ค่าเข้ากะเช้า : </dt>
-                                <dd class="col-sm-8 info-box-label">
-                                <input name="ShiftALW_M_PD" type="text" data-placement="top"  class="form-control" value="<?php echo $ShiftALW_M_PD;?>"/ >        
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <dl class="row">
-                                <dt class="col-sm-4 info-box-label">ค่าเข้ากะบ่าย : </dt>
-                                <dd class="col-sm-8 info-box-label">
-                                <input name="ShiftALW_E_PD" type="text" data-placement="top"  class="form-control" value="<?php echo $ShiftALW_E_PD;?>" / >        
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <dl class="row">
-                                <dt class="col-sm-4 info-box-label">ค่าเข้ากะดึก : </dt>
-                                <dd class="col-sm-8 info-box-label">
-                                <input name="ShiftALW_N_PD" type="text" data-placement="top"  class="form-control" value="<?php echo $ShiftALW_N_PD;?>" / >        
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <dl class="row">
-                                <dt class="col-sm-4 info-box-label">MealALW_F_PD : </dt>
-                                <dd class="col-sm-8 info-box-label">
-                                <input name="MealALW_F_PD" type="text" data-placement="top"  class="form-control" value="<?php echo $MealALW_F_PD;?>" / >        
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <dl class="row">
-                                <dt class="col-sm-4 info-box-label">MealALW_B_PM : </dt>
-                                <dd class="col-sm-8 info-box-label">
-                                <input name="MealALW_B_PM" type="text" data-placement="top"  class="form-control" value="<?php echo $MealALW_B_PM;?>" / >        
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <dl class="row">
-                                <dt class="col-sm-4 info-box-label">ค่าครองชีพ : </dt>
-                                <dd class="col-sm-8 info-box-label">
-                                <input name="LiveALW_PM" type="text" data-placement="top"  class="form-control" value="<?php echo $LiveALW_PM;?>" / >        
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <dl class="row">
-                                <dt class="col-sm-4 info-box-label">ค่าเบี้ยขยัน : </dt>
-                                <dd class="col-sm-8 info-box-label">
-                                <input name="NoAbsALW_PT" type="text" data-placement="top"  class="form-control" value="<?php echo $NoAbsALW_PT;?>" / >        
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <dl class="row">
-                                <dt class="col-sm-4 info-box-label">ค่าอาหาร : </dt>
-                                <dd class="col-sm-8 info-box-label">
-                                <input name="FoodALW_PD" type="text" data-placement="top"  class="form-control" value="<?php echo $FoodALW_PD;?>" / >        
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <dl class="row">
-                                <dt class="col-sm-4 info-box-label">ค่าอาหารกะดึก : </dt>
-                                <dd class="col-sm-8 info-box-label">
-                                <input name="NightFoodShift" type="text" data-placement="top"  class="form-control" value="<?php echo $NightFoodShift;?>" / >        
-                                </dd>
-                            </dl>
-                        </div>
+                       
 
                                             </div>
                                             </div>
@@ -400,7 +291,7 @@ $UMF_R = $rows['UMF_R'];
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Allow1_Name : </dt>
+                                                    <dt class="col-sm-4 info-box-label">ชื่อรายได้ที่ 1 : </dt>
                                                      <dd class="col-sm-8 info-box-label">
                                                     <input name="Allow1_Name" type="text" data-placement="top"  class="form-control" value="<?php echo $Allow1_Name;?>" / >        
                                                      </dd>
@@ -408,7 +299,7 @@ $UMF_R = $rows['UMF_R'];
                                                 </div>
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Allow2_Name : </dt>
+                                                    <dt class="col-sm-4 info-box-label">ชื่อรายได้ที่ 2 : </dt>
                                                      <dd class="col-sm-8 info-box-label">
                                                     <input name="Allow2_Name" type="text" data-placement="top"  class="form-control" value="<?php echo $Allow2_Name;?>" / >        
                                                      </dd>
@@ -416,7 +307,7 @@ $UMF_R = $rows['UMF_R'];
                                                 </div>
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Allow3_Name : </dt>
+                                                    <dt class="col-sm-4 info-box-label">ชื่อรายได้ที่ 3 : </dt>
                                                      <dd class="col-sm-8 info-box-label">
                                                     <input name="Allow3_Name" type="text" data-placement="top"  class="form-control" value="<?php echo $Allow3_Name;?>" / >        
                                                      </dd>
@@ -424,7 +315,7 @@ $UMF_R = $rows['UMF_R'];
                                                 </div>
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Allow4_Name : </dt>
+                                                    <dt class="col-sm-4 info-box-label">ชื่อรายได้ที่ 4 : </dt>
                                                      <dd class="col-sm-8 info-box-label">
                                                     <input name="Allow4_Name" type="text" data-placement="top"  class="form-control" value="<?php echo $Allow4_Name;?>" / >        
                                                      </dd>
@@ -432,7 +323,7 @@ $UMF_R = $rows['UMF_R'];
                                                 </div>
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Allow5_Name : </dt>
+                                                    <dt class="col-sm-4 info-box-label">ชื่อรายได้ที่ 5 : </dt>
                                                      <dd class="col-sm-8 info-box-label">
                                                     <input name="Allow5_Name" type="text" data-placement="top"  class="form-control" value="<?php echo $Allow5_Name;?>" / >        
                                                      </dd>
@@ -440,7 +331,7 @@ $UMF_R = $rows['UMF_R'];
                                                 </div>
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Allow6_Name : </dt>
+                                                    <dt class="col-sm-4 info-box-label">ชื่อรายได้ที่ 6 : </dt>
                                                      <dd class="col-sm-8 info-box-label">
                                                     <input name="Allow6_Name" type="text" data-placement="top"  class="form-control" value="<?php echo $Allow6_Name;?>" / >        
                                                      </dd>
@@ -457,7 +348,7 @@ $UMF_R = $rows['UMF_R'];
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Expen1_Name : </dt>
+                                                    <dt class="col-sm-4 info-box-label">ชื่อรายจ่ายที่ 1 : </dt>
                                                      <dd class="col-sm-8 info-box-label">
                                                     <input name="Expen1_Name" type="text" data-placement="top"  class="form-control" value="<?php echo $Expen1_Name;?>" / >        
                                                      </dd>
@@ -465,7 +356,7 @@ $UMF_R = $rows['UMF_R'];
                                                 </div>
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Expen2_Name : </dt>
+                                                    <dt class="col-sm-4 info-box-label">ชื่อรายจ่ายที่ 2 : </dt>
                                                      <dd class="col-sm-8 info-box-label">
                                                     <input name="Expen2_Name" type="text" data-placement="top"  class="form-control" value="<?php echo $Expen2_Name;?>" / >        
                                                      </dd>
@@ -473,7 +364,7 @@ $UMF_R = $rows['UMF_R'];
                                                 </div>
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Expen3_Name : </dt>
+                                                    <dt class="col-sm-4 info-box-label">ชื่อรายจ่ายที่ 3 : </dt>
                                                      <dd class="col-sm-8 info-box-label">
                                                     <input name="Expen3_Name" type="text" data-placement="top"  class="form-control" value="<?php echo $Expen3_Name;?>" / >        
                                                      </dd>
@@ -481,7 +372,7 @@ $UMF_R = $rows['UMF_R'];
                                                 </div>
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Expen4_Name : </dt>
+                                                    <dt class="col-sm-4 info-box-label">ชื่อรายจ่ายที่ 4 : </dt>
                                                      <dd class="col-sm-8 info-box-label">
                                                     <input name="Expen4_Name" type="text" data-placement="top"  class="form-control" value="<?php echo $Expen4_Name;?>" / >        
                                                      </dd>
@@ -500,11 +391,11 @@ $UMF_R = $rows['UMF_R'];
   <thead class="thead-dark">
     <tr>
     <th scope="col"></th>
-      <th scope="col">Calculation Flag</th>
-      <th scope="col">Leave Late</th>
-      <th scope="col">Over Time</th>
-      <th scope="col">P_Fund</th>
-      <th scope="col">Social</th>
+      <th scope="col">ประเภทรายการ</th>
+      <th scope="col">ขาด/ลา/มาสาย</th>
+      <th scope="col">ทำงานล่วงเวลา</th>
+      <th scope="col">กองทุนสำรองเลี้ยงชีพ</th>
+      <th scope="col">ประกันสังคม</th>
     </tr>
   </thead>
   <tbody>
@@ -853,23 +744,141 @@ $UMF_R = $rows['UMF_R'];
 <!-- ///////////////////////////////setup///////////////////////////////////////// -->
 <div class="tab-pane" id="setup">
                                         <div class="header-info-content-box content-box-padding">
-                                        <h3><u>Social Security</u></h3>
+                                        <h3><u>กำหนดค่าระบบ</u></h3>
+                                       <br/>
+                                            <div class="row">
+                                            <div class="col-md-6">
+                            <dl class="row">
+                                <dt class="col-sm-4 info-box-label">รอบการคำนวณ(ครั้ง) : </dt>
+                                <dd class="col-sm-8 info-box-label">
+                                <input name="Term_P_M" type="text" data-placement="top"  class="form-control" value="<?php echo $Term_P_M;?>" / >        
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-12"></div>
+                        <div class="col-md-6">
+                            <dl class="row">
+                                <dt class="col-sm-4 info-box-label">วันที่จ่ายครั้งที่ 1 : </dt>
+                                <dd class="col-sm-8 info-box-label">
+                                <input name="PaidDate" type="text" data-placement="top"  class="form-control" value="<?php echo $PaidDate;?>" / >        
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <dl class="row">
+                                <dt class="col-sm-4 info-box-label">วันที่จ่ายครั้งที่ 2 : </dt>
+                                <dd class="col-sm-8 info-box-label">
+                                <input name="PaidDate_2" type="text" data-placement="top"  class="form-control " value="<?php echo $PaidDate_2;?>" / >        
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <dl class="row">
+                                <dt class="col-sm-4 info-box-label">WkHrs_Drv : </dt>
+                                <dd class="col-sm-8 info-box-label">
+                                <input name="WkHrs_Drv" type="text" data-placement="top"  class="form-control"value="<?php echo $WkHrs_Drv;?>" / >        
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <dl class="row">
+                                <dt class="col-sm-4 info-box-label">WkHrs_Empl : </dt>
+                                <dd class="col-sm-8 info-box-label">
+                                <input name="WkHrs_Empl" type="text" data-placement="top"  class="form-control"value="<?php echo $WkHrs_Empl;?>" / >        
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <dl class="row">
+                                <dt class="col-sm-4 info-box-label">ค่าเข้ากะเช้า : </dt>
+                                <dd class="col-sm-8 info-box-label">
+                                <input name="ShiftALW_M_PD" type="text" data-placement="top"  class="form-control" value="<?php echo $ShiftALW_M_PD;?>"/ >        
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <dl class="row">
+                                <dt class="col-sm-4 info-box-label">ค่าเข้ากะบ่าย : </dt>
+                                <dd class="col-sm-8 info-box-label">
+                                <input name="ShiftALW_E_PD" type="text" data-placement="top"  class="form-control" value="<?php echo $ShiftALW_E_PD;?>" / >        
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <dl class="row">
+                                <dt class="col-sm-4 info-box-label">ค่าเข้ากะดึก : </dt>
+                                <dd class="col-sm-8 info-box-label">
+                                <input name="ShiftALW_N_PD" type="text" data-placement="top"  class="form-control" value="<?php echo $ShiftALW_N_PD;?>" / >        
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-12"></div>
+                        <div class="col-md-6">
+                            <dl class="row">
+                                <dt class="col-sm-4 info-box-label">MealALW_F_PD : </dt>
+                                <dd class="col-sm-8 info-box-label">
+                                <input name="MealALW_F_PD" type="text" data-placement="top"  class="form-control" value="<?php echo $MealALW_F_PD;?>" / >        
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <dl class="row">
+                                <dt class="col-sm-4 info-box-label">MealALW_B_PM : </dt>
+                                <dd class="col-sm-8 info-box-label">
+                                <input name="MealALW_B_PM" type="text" data-placement="top"  class="form-control" value="<?php echo $MealALW_B_PM;?>" / >        
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <dl class="row">
+                                <dt class="col-sm-4 info-box-label">ค่าครองชีพ : </dt>
+                                <dd class="col-sm-8 info-box-label">
+                                <input name="LiveALW_PM" type="text" data-placement="top"  class="form-control" value="<?php echo $LiveALW_PM;?>" / >        
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <dl class="row">
+                                <dt class="col-sm-4 info-box-label">ค่าเบี้ยขยัน : </dt>
+                                <dd class="col-sm-8 info-box-label">
+                                <input name="NoAbsALW_PT" type="text" data-placement="top"  class="form-control" value="<?php echo $NoAbsALW_PT;?>" / >        
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <dl class="row">
+                                <dt class="col-sm-4 info-box-label">ค่าอาหาร : </dt>
+                                <dd class="col-sm-8 info-box-label">
+                                <input name="FoodALW_PD" type="text" data-placement="top"  class="form-control" value="<?php echo $FoodALW_PD;?>" / >        
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <dl class="row">
+                                <dt class="col-sm-4 info-box-label">ค่าอาหารกะดึก : </dt>
+                                <dd class="col-sm-8 info-box-label">
+                                <input name="NightFoodShift" type="text" data-placement="top"  class="form-control" value="<?php echo $NightFoodShift;?>" / >        
+                                </dd>
+                            </dl>
+                        </div>
+                                            </div>
+                                        <h3><u>ประกันสังคม</u></h3>
                                        <br/>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Rate % : </dt>
+                                                    <dt class="col-sm-4 info-box-label">% การหัก : </dt>
                                                      <dd class="col-sm-8 info-box-label">
-                                                    <input name="" type="text" data-placement="top"  class="form-control" value="<?php ?>" / >        
+                                                    <input name="SOC_Rate" type="number" data-placement="top"  class="form-control" value="<?php echo $SOC_Rate; ?>" min="0" max="100" / >        
                                                      </dd>
                                                         </dl>
                                                 </div>
-                                                <div class="col-md-6"></div>
+                                                <div class="col-md-12"></div>
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Minimun Income(Bath) : </dt>
+                                                    <dt class="col-sm-4 info-box-label">รายได้ขั้นต่ำ : </dt>
                                                      <dd class="col-sm-8 info-box-label">
-                                                    <input name="" type="text" data-placement="top"  class="form-control" value="<?php ?>" / >   
+                                                    <input name="SOC_MN_Inc" type="number" data-placement="top"  class="form-control" value="<?php  echo $SOC_MN_Inc; ?>" / >   
                                                      </dd>
                                                         </dl>
                                                 </div>
@@ -877,15 +886,15 @@ $UMF_R = $rows['UMF_R'];
                                                     <dl class="row">
                                                     <dt class="col-sm-4 info-box-label">Soc(Bath) : </dt>
                                                      <dd class="col-sm-8 info-box-label">
-                                                    <input name="" type="text" data-placement="top"  class="form-control" value="<?php ?>" / >        
+                                                    <input name="" type="text" data-placement="top"  class="form-control" value="<?php ?>" disabled / >        
                                                      </dd>
                                                         </dl>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Maximum Income(Bath) :  </dt>
+                                                    <dt class="col-sm-4 info-box-label">รายได้ขั้นสูง :  </dt>
                                                      <dd class="col-sm-8 info-box-label">
-                                                    <input name="" type="text" data-placement="top"  class="form-control" value="<?php ?>" / >        
+                                                    <input name="SOC_MX_Inc" type="number" data-placement="top"  class="form-control" value="<?php echo $SOC_MX_Inc; ?>" / >        
                                                      </dd>
                                                         </dl>
                                                 </div>
@@ -893,27 +902,27 @@ $UMF_R = $rows['UMF_R'];
                                                     <dl class="row">
                                                     <dt class="col-sm-4 info-box-label">Soc(Bath) :  </dt>
                                                      <dd class="col-sm-8 info-box-label">
-                                                    <input name="" type="text" data-placement="top"  class="form-control" value="<?php ;?>" / >        
+                                                    <input name="" type="text" data-placement="top"  class="form-control" value="<?php ;?>" disabled / >        
                                                      </dd>
                                                         </dl>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Account No :  </dt>
+                                                    <dt class="col-sm-4 info-box-label">เลขทะเบียนประกันสังคม:  </dt>
                                                      <dd class="col-sm-8 info-box-label">
-                                                    <input name="" type="text" data-placement="top"  class="form-control" value="<?php ?>" / >        
+                                                    <input name="SOC_Acc_No" type="text" data-placement="top"  class="form-control" value="<?php  echo $SOC_Acc_No;?>" / >        
                                                      </dd>
                                                         </dl>
                                                 </div>
                                             </div>
 
                                             <br/>
-                                            <h3><u>Bank Information</u></h3>
+                                            <h3><u>ข้อมูลธนาคารโอน</u></h3>
                                             <br/>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">KBank Account No : </dt>
+                                                    <dt class="col-sm-4 info-box-label">เลขที่บัญชีธนาคาร (ธ.กสิกร) : </dt>
                                                      <dd class="col-sm-8 info-box-label">
                                                     <input name="TFB_Acc_No" type="text" data-placement="top"  class="form-control" value="<?php echo $TFB_Acc_No;?>" / >        
                                                      </dd>
@@ -922,7 +931,7 @@ $UMF_R = $rows['UMF_R'];
                                                 <div class="col-md-6"></div>
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">BBL Account : </dt>
+                                                    <dt class="col-sm-4 info-box-label">เลขที่บัญชีธนาคาร (ธ.กรุงเทพ) : </dt>
                                                      <dd class="col-sm-8 info-box-label">
                                                     <input name="BBL_Acc_No" type="text" data-placement="top"  class="form-control" value="<?php echo $BBL_Acc_No;?>" / >   
                                                      </dd>
@@ -931,12 +940,12 @@ $UMF_R = $rows['UMF_R'];
                                                 
                                             </div>
                                             <br/>
-                                            <h3><u>Provident Fund Information</u></h3>
+                                            <h3><u>ข้อมูลกองทุนสำรองเลี้ยงชีพ</u></h3>
                                             <br/>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">PF_Name : </dt>
+                                                    <dt class="col-sm-4 info-box-label">ชื่อกองทุน : </dt>
                                                      <dd class="col-sm-8 info-box-label">
                                                     <input name="PF_Name" type="text" data-placement="top"  class="form-control" value="<?php echo $PF_Name;?>" / >        
                                                      </dd>
@@ -945,7 +954,7 @@ $UMF_R = $rows['UMF_R'];
                                                 <div class="col-md-6"></div>
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Provident Fund No : </dt>
+                                                    <dt class="col-sm-4 info-box-label">รหัสกองทุน : </dt>
                                                      <dd class="col-sm-8 info-box-label">
                                                     <input name="PF_No" type="text" data-placement="top"  class="form-control" value="<?php echo $PF_No;?>" / >   
                                                      </dd>
@@ -953,7 +962,7 @@ $UMF_R = $rows['UMF_R'];
                                                 </div>
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Company Code : </dt>
+                                                    <dt class="col-sm-4 info-box-label">รหัสบริษัท : </dt>
                                                      <dd class="col-sm-8 info-box-label">
                                                     <input name="PF_Comp_No" type="text" data-placement="top"  class="form-control" value="<?php echo $PF_Comp_No;?>" / >        
                                                      </dd>
@@ -962,19 +971,19 @@ $UMF_R = $rows['UMF_R'];
                                                
                                             </div>
                                             <br/>
-                                            <h3><u>Union Member Fee</u></h3>
+                                            <h3><u>การหักเงินสมาชิกสหภาพฯ</u></h3>
                                             <br/>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <dl class="row">
-                                                    <dt class="col-sm-4 info-box-label">Union Member Fee : </dt>
+                                                    <dt class="col-sm-4 info-box-label">% การหัก : </dt>
                                                      <dd class="col-sm-8 info-box-label">
                                                     <input name="UMF_R" type="text" data-placement="top"  class="form-control" value="<?php echo $UMF_R;?>" / >        
                                                      </dd>
                                                         </dl>
                                                 </div>
                                               
-                                               
+                                                
                                             </div>
                                         
                                             </form>
