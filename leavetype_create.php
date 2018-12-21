@@ -12,7 +12,7 @@ if($_SESSION['UserID'] == "")
         <div class="row">
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-            <h1>Create Leave Type</h1>
+            <h1>เพิ่มประเภทการลา</h1>
             <hr>
             <div class="row">
                 <div class="col-lg-12">
@@ -35,7 +35,7 @@ if($_SESSION['UserID'] == "")
       <div class="row">
       <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Leave Type No : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">รหัสประเภทการลา : <span class="field-required">*</span></dt>
             <dd class="col-sm-4 info-box-label">
             <input name="AttnCode" type="text" data-placement="top" required  class="form-control" maxlength="5"/>      
             </dd>
@@ -43,7 +43,7 @@ if($_SESSION['UserID'] == "")
         </div>
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Description (EN) : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">คำอธิบาย (ENG) : <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">
             <input name="AttnEDesc" type="text" data-placement="top" required  class="form-control" maxlength="50"  />
             </dd>
@@ -51,7 +51,7 @@ if($_SESSION['UserID'] == "")
         </div>
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Description (TH) : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">คำอธิบาย (TH) : <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">
             <input name="AttnTDesc" type="text" data-placement="top"  required  class="form-control"  maxlength="50"/>      
             </dd>

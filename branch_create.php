@@ -12,7 +12,7 @@ if($_SESSION['UserID'] == "")
         <div class="row">
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-            <h1>Create Branch</h1>
+            <h1>เพิ่มสาขา</h1>
             <hr>
             <div class="row">
                 <div class="col-lg-12">

@@ -66,7 +66,7 @@ if(isset($_GET["BranchCode"])) {
         <div class="row">
 <!-- Blog Entries Column -->
 <div class="col-md-12">
-            <h1>Change Branch</h1>
+            <h1>แก้ไขสาขา</h1>
             <hr>
             <div class="row">
             <div class="col-lg-12">

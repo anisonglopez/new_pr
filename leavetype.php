@@ -18,7 +18,7 @@ $DATA = mysqli_query($conn, $sql);
 
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-                <h1>Leave Type</h1>
+                <h1>ประเภทการลา</h1>
             <hr>
             
           
@@ -35,11 +35,11 @@ $DATA = mysqli_query($conn, $sql);
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-                                    <th scope="col">Leave Type No</th>
-                                    <th scope="col">Description (EN)</th>
-                                    <th scope="col">Description (TH)</th>
-                                    <th scope="col">อัตราหัก</th>
-                                    <th scope="col">Deduct Flag</th>
+                                    <th scope="col">รหัสประเภทการลา</th>
+                                    <th scope="col">คำอธิบาย (ENG)</th>
+                                    <th scope="col">คำอธิบาย (TH)</th>
+                                    <th scope="col">อัตราหัก (%)</th>
+                                    <th scope="col">หักเงิน</th>
                                     <th scope="col" style="text-align: center;">Action</th>
                                     </tr>
                                 </thead>

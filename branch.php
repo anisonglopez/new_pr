@@ -18,7 +18,7 @@ $DATA = mysqli_query($conn, $sql);
 
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-                <h1>Branch</h1>
+                <h1>ข้อมูลสาขา</h1>
             <hr>
             
           

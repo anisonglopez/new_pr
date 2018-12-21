@@ -21,7 +21,7 @@ if(isset($_GET["AttnCode"])) {
     <div class="row">
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Leave Type : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">รหัสประเภทการลา : <span class="field-required">*</span></dt>
             <dd class="col-sm-4 info-box-label">
             <input name="AttnCode" type="text" value="'.$rows["AttnCode"].'" data-placement="top" required  class="form-control" maxlength="5" disabled />      
             </dd>
@@ -29,7 +29,7 @@ if(isset($_GET["AttnCode"])) {
         </div>
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Description (EN) : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">คำอธิบาย (ENG) : <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">
             <input name="AttnEDesc" type="text" value="'.$rows["AttnEDesc"].'" data-placement="top" required  class="form-control" maxlength="50" />
             </dd>
@@ -37,7 +37,7 @@ if(isset($_GET["AttnCode"])) {
         </div>
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Description (TH) : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">คำอธิบาย (TH) : <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">
             <input name="AttnTDesc" type="text" value="'.$rows["AttnTDesc"].'" data-placement="top" required  class="form-control"  maxlength="50"/>      
             </dd>
@@ -60,7 +60,7 @@ if(isset($_GET["AttnCode"])) {
           <dl class="row">
             <dt class="col-sm-2 info-box-label">อัตราหัก (%) : </dt>
             <dd class="col-sm-2 info-box-label">
-						<input id="Ded_Rate" name="Ded_Rate" type="number" value="'.$rows["Ded_Rate"].'" data-placement="top"  class="form-control"min="0" '.$disabled.'/>   
+						<input id="Ded_Rate" name="Ded_Rate" type="number" value="'.$rows["Ded_Rate"].'" data-placement="top"  class="form-control"min="0" max="100" '.$disabled.'/>   
             </dd>
           </dl>
         </div>
@@ -75,7 +75,7 @@ if(isset($_GET["AttnCode"])) {
         <div class="row">
 <!-- Blog Entries Column -->
 <div class="col-md-12">
-            <h1>Change Leave Type</h1>
+            <h1>แก้ไขประเภทการลา</h1>
             <hr>
             <div class="row">
             <div class="col-lg-12">
