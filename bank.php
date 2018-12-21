@@ -18,7 +18,7 @@ $DATA = mysqli_query($conn, $sql);
 
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-                <h1>Bank Information</h1>
+                <h1>ข้อมูลธนาคาร</h1>
             <hr>
             
           
@@ -35,10 +35,10 @@ $DATA = mysqli_query($conn, $sql);
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-                                    <th scope="col">Bank No</th>
-                                    <th scope="col">Bank Name(EN)</th>
-                                    <th scope="col">Bank Name (TH)</th>
-                                    <th scope="col">Tel</th>
+                                    <th scope="col">รหัสธนาคาร</th>
+                                    <th scope="col">ชื่อธนาคาร (ENG)</th>
+                                    <th scope="col">ชื่อธนาคาร (TH)</th>
+                                    <th scope="col">เบอร์โทรศัพท์</th>
                                     <th scope="col" style="text-align: center;">Action</th>
                                     </tr>
                                 </thead>

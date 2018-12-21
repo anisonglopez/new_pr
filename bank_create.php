@@ -12,7 +12,7 @@ if($_SESSION['UserID'] == "")
         <div class="row">
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-            <h1>Create Bank</h1>
+            <h1>เพิ่มข้อมูลธนาคาร</h1>
             <hr>
             <div class="row">
                 <div class="col-lg-12">
@@ -35,7 +35,7 @@ if($_SESSION['UserID'] == "")
       <div class="row">
       <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Bank No : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">รหัสธนาคาร : <span class="field-required">*</span></dt>
             <dd class="col-sm-2 info-box-label">
             <input name="bankcode" type="text" data-placement="top" required  class="form-control" maxlength="20"/>      
             </dd>
@@ -43,7 +43,7 @@ if($_SESSION['UserID'] == "")
         </div>
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Bank Name (EN) : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">ชื่อธนาคาร (ENG): <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">
             <input name="BankEName" type="text" data-placement="top" required  class="form-control" maxlength="100"/>
             </dd>
@@ -51,7 +51,7 @@ if($_SESSION['UserID'] == "")
         </div>
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Bank Name (TH) : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">ชื่อธนาคาร (TH): <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">
             <input name="BankTName" type="text" data-placement="top" required  class="form-control"  maxlength="100"/>      
             </dd>
@@ -59,7 +59,7 @@ if($_SESSION['UserID'] == "")
         </div>
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Address : </dt>
+            <dt class="col-sm-2 info-box-label">ที่อยู่ : </dt>
             <dd class="col-sm-8 info-box-label">
             <textarea class="form-control" rows="5" name="Address"></textarea>       
             </dd>
@@ -67,7 +67,7 @@ if($_SESSION['UserID'] == "")
         </div>
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Tel : </dt>
+            <dt class="col-sm-2 info-box-label">เบอร์โทรศัพท์ : </dt>
             <dd class="col-sm-5 info-box-label">
             <input name="PhoneNo" type="text" data-placement="top"  class="form-control"  maxlength="50"/>      
             </dd>

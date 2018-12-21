@@ -26,7 +26,7 @@ if(isset($_GET["bankcode"])) {
         </div>
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">ชื่อธนาคาร(ENG) : </dt>
+            <dt class="col-sm-2 info-box-label">ชื่อธนาคาร (ENG) : </dt>
             <dd class="col-sm-8 info-box-label">
             <input name="BankEName" type="text" value="'.$rows["BankEName"].'" data-placement="top" required  class="form-control" maxlength="100" />
             </dd>
@@ -34,7 +34,7 @@ if(isset($_GET["bankcode"])) {
         </div>
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">ชื่อธนาคาร(TH) : </dt>
+            <dt class="col-sm-2 info-box-label">ชื่อธนาคาร (TH) : </dt>
             <dd class="col-sm-8 info-box-label">
             <input name="BankTName" type="text" value="'.$rows["BankTName"].'" data-placement="top"  class="form-control"  maxlength="100"/>      
             </dd>
@@ -67,7 +67,7 @@ if(isset($_GET["bankcode"])) {
         <div class="row">
 <!-- Blog Entries Column -->
 <div class="col-md-12">
-            <h1>Change Bank</h1>
+            <h1>แก้ไขข้อมูลธนาคาร</h1>
             <hr>
             <div class="row">
             <div class="col-lg-12">
