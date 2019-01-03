@@ -84,7 +84,7 @@ if(isset($_GET["PosiCode"])) {
         <div class="row">
 <!-- Blog Entries Column -->
 <div class="col-md-12">
-            <h1>Change Position</h1>
+            <h1>แก้ไขตำแหน่งงาน</h1>
             <hr>
             <div class="row">
             <div class="col-lg-12">

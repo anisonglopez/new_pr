@@ -36,7 +36,7 @@ while ($row = mysqli_fetch_array($DATA_Sys_Con)) {
 
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-                <h1>Other Allowance</h1>
+                <h1>รายได้อื่น ๆ</h1>
             <hr>
             
           

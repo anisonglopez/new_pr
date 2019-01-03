@@ -18,7 +18,7 @@ $DATA = mysqli_query($conn, $sql);
 
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-                <h1>Department</h1>
+                <h1>แผนก/ฝ่าย</h1>
             <hr>
             
           
@@ -35,9 +35,9 @@ $DATA = mysqli_query($conn, $sql);
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-                                    <th scope="col">Dep No</th>
-                                    <th scope="col">Description (EN)</th>
-                                    <th scope="col">Description (TH)</th>
+                                    <th scope="col">รหัสแผนก/ฝ่าย</th>
+                                    <th scope="col">คำอธิบาย (EN)</th>
+                                    <th scope="col">คำอธิบาย (TH)</th>
                                     <th scope="col" style="text-align: center;">Action</th>
                                     </tr>
                                 </thead>

@@ -12,7 +12,7 @@ if($_SESSION['UserID'] == "")
         <div class="row">
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-            <h1>Create Deduct Type</h1>
+            <h1>เพิ่มประเภทการหัก</h1>
             <hr>
             <div class="row">
                 <div class="col-lg-12">
@@ -35,7 +35,7 @@ if($_SESSION['UserID'] == "")
       <div class="row">
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Description (EN) : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">คำอธิบาย (EN) : <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">
             <input name="DeductDesc" type="text" data-placement="top" required  class="form-control" maxlength="20"  />
             </dd>
@@ -43,7 +43,7 @@ if($_SESSION['UserID'] == "")
         </div>
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Description (TH) : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">คำอธิบาย (TH) : <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">
             <input name="DeductTDesc" type="text" data-placement="top"  required  class="form-control"  maxlength="20"/>      
             </dd>
@@ -91,7 +91,7 @@ if($_SESSION['UserID'] == "")
         </div>
 				<div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Tax Calculate Flag : </dt>
+            <dt class="col-sm-2 info-box-label">คำนวณภาษี: </dt>
             <dd class="col-sm-2">
             <div class="material-switch">
                <input id="TaxCalFlag" name="TaxCalFlag" type="checkbox" value="1"/>

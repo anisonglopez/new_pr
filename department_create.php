@@ -12,7 +12,7 @@ if($_SESSION['UserID'] == "")
         <div class="row">
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-            <h1>Create Department</h1>
+            <h1>เพิ่มแผนก/ฝ่าย</h1>
             <hr>
             <div class="row">
                 <div class="col-lg-12">
@@ -35,7 +35,7 @@ if($_SESSION['UserID'] == "")
       <div class="row">
       <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Department No : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">รหัสแผนก/ฝ่าย : <span class="field-required">*</span></dt>
             <dd class="col-sm-2 info-box-label">
             <input name="DeptCode" type="text" data-placement="top" required  class="form-control" maxlength="5"/>      
             </dd>
@@ -43,7 +43,7 @@ if($_SESSION['UserID'] == "")
         </div>
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Description (ENG) : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">คำอธิบาย (EN) : <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">
             <input name="DeptEDesc" type="text" data-placement="top" required  class="form-control" maxlength="100"  />
             </dd>
@@ -51,7 +51,7 @@ if($_SESSION['UserID'] == "")
         </div>
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">Description (TH) : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">คำอธิบาย (TH) : <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">
             <input name="DeptTDesc" type="text" data-placement="top"  required class="form-control"  maxlength="100"/>      
             </dd>

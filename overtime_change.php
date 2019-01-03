@@ -89,7 +89,7 @@ if(isset($_GET["id"])) {
         <div class="row">
 <!-- Blog Entries Column -->
 <div class="col-md-12">
-            <h1>Change Overtime</h1>
+            <h1>แก้ไขรายการทำงานล่วงเวลา</h1>
             <hr>
             <div class="row">
             <div class="col-lg-12">

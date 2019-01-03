@@ -56,7 +56,7 @@
           <li><a href="leavetype.php">ประเภทการลา</a></li>
           <li><a href="deducttype.php">ประเภทการหัก</a></li>
           <li><a href="department.php">แผนก/ฝ่าย</a></li>
-          <li><a href="empincome.php">รายได้</a></li>
+          <li><a href="empincome.php">ประเภทรายได้</a></li>
           <li><a href="bank.php">ธนาคาร</a></li>
         </ul>
       </li>

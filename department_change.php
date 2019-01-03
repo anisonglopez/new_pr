@@ -18,7 +18,7 @@ if(isset($_GET["DeptCode"])) {
     <div class="row">
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">รหัสการหักเงิน : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">รหัสแผนก/ฝ่าย : <span class="field-required">*</span></dt>
             <dd class="col-sm-2 info-box-label">
             <input name="DeptCode" type="text" value="'.$rows["DeptCode"].'" data-placement="top" required  class="form-control" disabled/>      
             </dd>
@@ -26,7 +26,7 @@ if(isset($_GET["DeptCode"])) {
         </div>
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">คำอธิบาย(ENG) : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">คำอธิบาย (EN) : <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">
             <input name="DeptEDesc" type="text" value="'.$rows["DeptEDesc"].'" data-placement="top" required  class="form-control" maxlength="100" />
             </dd>
@@ -34,7 +34,7 @@ if(isset($_GET["DeptCode"])) {
         </div>
         <div class="col-md-12">
           <dl class="row">
-            <dt class="col-sm-2 info-box-label">คำอธิบาย(TH) : <span class="field-required">*</span></dt>
+            <dt class="col-sm-2 info-box-label">คำอธิบาย (TH) : <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">
             <input name="DeptTDesc" type="text" value="'.$rows["DeptTDesc"].'" data-placement="top" required  class="form-control"  maxlength="100"/>      
             </dd>
@@ -50,7 +50,7 @@ if(isset($_GET["DeptCode"])) {
         <div class="row">
 <!-- Blog Entries Column -->
 <div class="col-md-12">
-            <h1>Change Deduct Type</h1>
+            <h1>แก้ไขแผนก/ฝ่าย</h1>
             <hr>
             <div class="row">
             <div class="col-lg-12">

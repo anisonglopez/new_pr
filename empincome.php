@@ -18,7 +18,7 @@ $DATA = mysqli_query($conn, $sql);
 
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-                <h1>Employee Income</h1>
+                <h1>ประเภทรายได้</h1>
             <hr>
             
           
@@ -35,11 +35,11 @@ $DATA = mysqli_query($conn, $sql);
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-                                    <th scope="col">Income No</th>
-                                    <th scope="col">Description (EN)</th>
-                                    <th scope="col">Description (TH)</th>
-                                    <th scope="col">Amount</th>
-                                    <th scope="col">Tax</th>
+                                    <th scope="col">รหัสประเภทรายได้</th>
+                                    <th scope="col">คำอธิบาย (EN)</th>
+                                    <th scope="col">คำอธิบาย (TH)</th>
+                                    <th scope="col">จำนวนเงิน</th>
+                                    <th scope="col">คำนวณภาษี</th>
                                     <th scope="col" style="text-align: center;">Action</th>
                                     </tr>
                                 </thead>

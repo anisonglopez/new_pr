@@ -21,7 +21,7 @@ $DATA = mysqli_query($conn, $sql);
 
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-                <h1>Other Deduct</h1>
+                <h1>รายการหัก</h1>
             <hr>
             
           
@@ -44,7 +44,7 @@ $DATA = mysqli_query($conn, $sql);
                                     <th scope="col">ประเภทการหักเงิน</th>
                                     <th scope="col">หมายเหตุ</th>
                                     <th scope="col">จำนวนเงิน</th>
-                                    <th scope="col">เงื่อนไขภาษี</th>
+                                    <th scope="col">คำนวณภาษี</th>
                                     <th scope="col" style="text-align: center;">Action</th>
                                     </tr>
                                 </thead>

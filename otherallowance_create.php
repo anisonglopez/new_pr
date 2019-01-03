@@ -29,7 +29,7 @@ while ($row = mysqli_fetch_array($DATA_Sys_Con)) {
         <div class="row">
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-            <h1>Create Other Allowance</h1>
+            <h1>เพิ่มรายการรายได้อื่น ๆ</h1>
             <hr>
             <div class="row">
                 <div class="col-lg-12">
@@ -131,7 +131,7 @@ while ($row = mysqli_fetch_array($DATA_Sys_Con)) {
                         </div>   
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">Remark : </dt>
+                                <dt class="col-sm-4 info-box-label">หมายเหตุ : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                  <textarea  class="form-control" rows="3" name="Remark" id="Remark" placeholder="ระบุหมายเหตุ"></textarea>
                                 </dd>

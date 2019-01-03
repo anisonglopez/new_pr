@@ -12,7 +12,7 @@ if($_SESSION['UserID'] == "")
         <div class="row">
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-            <h1>Create Position Allowance</h1>
+            <h1>เพิ่มเงินประจำตำแหน่ง</h1>
             <hr>
             <div class="row">
                 <div class="col-lg-12">
@@ -64,7 +64,7 @@ if($_SESSION['UserID'] == "")
 
                         <div class="col-md-6">
                             <dl class="row">
-                            <dt class="col-sm-4 info-box-label">Position : <span class="field-required">*</span></dt>
+                            <dt class="col-sm-4 info-box-label">ตำแหน่ง : <span class="field-required">*</span></dt>
                        <dd class="col-sm-8 info-box-label">
                        <select class="form-control"  name="PosiCode" required>
                        <option value="">Select</option>   
@@ -91,7 +91,7 @@ if($_SESSION['UserID'] == "")
                         </div>      
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">Remark : </dt>
+                                <dt class="col-sm-4 info-box-label">หมายเหตุ : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                  <textarea  class="form-control" rows="3" name="Remark" id="Remark" placeholder="ระบุหมายเหตุ"></textarea>
                                 </dd>
