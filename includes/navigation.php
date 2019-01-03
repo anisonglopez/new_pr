@@ -18,8 +18,8 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">ประมวลผลประจำรอบ
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                              <li><a href="systemcon.php">จัดเตรียมข้อมูลก่อนระมวลผล</a></li>
-                              <li><a href="monthlyclosingprocress.php">ประมวลผลค่าจ้างประจำรอบ</a></li>
+                              <li><a href="systemcon.php">จัดเตรียมข้อมูลก่อนการประมวลผล</a></li>
+                              <li><a href="monthlyclosingprocress.php">ประมวลผลค่าจ้าง</a></li>
                             </ul>
                           </li>
                     </li>

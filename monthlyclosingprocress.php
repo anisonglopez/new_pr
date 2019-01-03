@@ -13,7 +13,7 @@ if($_SESSION['UserID'] == "")
 
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-                <h1>ประมวลผลค่าจ้างประจำรอบ</h1>
+                <h1>ประมวลผลค่าจ้าง</h1>
             <hr>
             
           
@@ -25,15 +25,15 @@ if($_SESSION['UserID'] == "")
                         <div class="panel-body">
                         <div class="col-md-12">
                             <dl class="row">
-                                <dt class="col-sm-2 info-box-label">Period : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-2 info-box-label">ประจำงวดที่ : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-2">
                                 <input type="date" name="AttnDate"  class="form-control" />
                                 </dd>
-                                <dt class="col-sm-1 info-box-label">Term : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-1 info-box-label">รอบการคำนวณ : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-2">
                                 <input type="number" name="AttnDate"  class="form-control" />
                                 </dd>
-                                <dt class="col-sm-1 info-box-label">Holiday : </dt>
+                                <dt class="col-sm-1 info-box-label">จำนวนวันหยุด : </dt>
                                 <dd class="col-sm-2">
                                 <input type="number" name="AttnDate"  class="form-control" />
                                 </dd>
@@ -46,11 +46,11 @@ if($_SESSION['UserID'] == "")
                         <table width="100%" class="table table-striped table-bordered table-hover">
                                 <thead>
                                 <tr>
-                                <th colspan="2">Function List</th>
+                                <th colspan="2">เลือกฟังก์ชั่น</th>
                                 </tr>
                                     <tr>
                                      <th scope="col" width="15%"><input type="checkbox"/>  Select All</th>
-                                    <th scope="col">Description</th>
+                                    <th scope="col" style="text-align: center;">คำอธิบาย</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -60,58 +60,62 @@ if($_SESSION['UserID'] == "")
                                  </tr>
                                  <tr>
                                     <td style="text-align : center;"><input type="checkbox"/> </td>
-                                    <td>Post Allowance - Express Transaction</td> 
+                                    <td>คำนวณรายได้/รายจ่าย</td> 
                                  </tr>   
                                  <tr>
                                     <td style="text-align : center;"><input type="checkbox"/> </td>
-                                    <td>Post Other Income and Deduct Transaction</td> 
+                                    <td>คำนวณรายได้อื่นๆ/รายการหัก</td> 
                                  </tr>  
                                  <tr>
                                     <td style="text-align : center;"><input type="checkbox"/> </td>
-                                    <td>Post Attendance Transaction</td> 
+                                    <td>ประมวล รายการ ขาด ลา มาสาย</td> 
                                  </tr>    
                                  <tr>
                                     <td style="text-align : center;"><input type="checkbox"/> </td>
-                                    <td>Post Overtime Transaction</td> 
+                                    <td>ประมวลผลค่าล่วงเวลา</td> 
                                  </tr>      
                                  <tr>
                                     <td style="text-align : center;"><input type="checkbox"/> </td>
-                                    <td>Provident Fund Calculation Transaction</td> 
+                                    <td>คำนวณเงินกองทุนสำรองเลี้ยงชีพ</td> 
                                  </tr>      
                                  <tr>
                                     <td style="text-align : center;"><input type="checkbox"/> </td>
-                                    <td>Social Security Calculation Transaction</td> 
+                                    <td>คำนวณเงินประกันสังคม</td> 
                                  </tr>          
                                  <tr>
                                     <td style="text-align : center;"><input type="checkbox"/> </td>
-                                    <td>Monthly Tax Calculation Transaction</td> 
+                                    <td>คำนวณการหักเงินภาษีรายได้</td> 
                                  </tr>          
                                  <tr>
                                     <td style="text-align : center;"><input type="checkbox"/> </td>
-                                    <td>Reset Diligent Level</td> 
+                                    <td>รีเซ็ทระดับเบี้ยขยันสะสม</td> 
+                                 </tr>        
+                                 <tr>
+                                    <td style="text-align : center;"><input type="checkbox"/> </td>
+                                    <td>คำนวณระดับเบี้ยขยันสะสม</td> 
                                  </tr>        
                                 </tbody>
                                 <thead>
                                         <tr>
-                                        <th colspan="2">Option</th>
+                                        <th colspan="2">เงื่อนไข</th>
                                         </tr>    
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td style="text-align : center;"><input type="checkbox" disabled/> </td>
-                                    <td>Annual Leave Remaining Refund Calculation (2nd Trem of Jan)</td> 
+                                    <td>คำนวณคืนเงินพักร้อนคงเหลือ</td> 
                                  </tr>  
                                  <tr>
                                     <td style="text-align : center;"><input type="checkbox" disabled/> </td>
-                                    <td>Union Member Fee Calculation (2nd Term of Dec)</td> 
+                                    <td>คำนวณการหักเงินสหภาพ</td> 
                                  </tr>  
                                  <tr>
                                     <td style="text-align : center;"><input type="checkbox" disabled/> </td>
-                                    <td>Bonus Calculation (Pay Bonus)</td> 
+                                    <td>คำนวณเงินโบนัส</td> 
                                  </tr>  
                                  <tr>
                                     <td style="text-align : center;"><input type="checkbox" disabled/> </td>
-                                    <td>Bonus Tax Calculation</td> 
+                                    <td>คำนวณภาษีโบนัส</td> 
                                  </tr>  
                                 </tbody>
                             </table>
@@ -123,17 +127,17 @@ if($_SESSION['UserID'] == "")
                                 </div>
                                 <div class="col-md-12">
                                         <dl class="row">
-                                            <dt class="col-sm-2 info-box-label">Criteria</dt>
+                                            <dt class="col-sm-2 info-box-label">เงื่อนไขการประมวลผล</dt>
                                         </dl>
                                 </div>    
 
                                  <div class="col-md-12">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">Employee From : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-4 info-box-label">จากรหัสพนักงาน : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-2">
                                 <input type="date" name="AttnDate"  class="form-control" />
                                 </dd>
-                                <dt class="col-sm-1 info-box-label">to : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-1 info-box-label">ถึง : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-2">
                                 <input type="number" name="AttnDate"  class="form-control" />
                                 </dd>
@@ -142,11 +146,11 @@ if($_SESSION['UserID'] == "")
 
                         <div class="col-md-12">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">Department From : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-4 info-box-label">จากรหัสแผนก : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-2">
                                 <input type="date" name="AttnDate"  class="form-control" />
                                 </dd>
-                                <dt class="col-sm-1 info-box-label">to : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-1 info-box-label">ถึง : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-2">
                                 <input type="number" name="AttnDate"  class="form-control" />
                                 </dd>
