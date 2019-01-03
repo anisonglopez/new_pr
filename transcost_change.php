@@ -33,19 +33,38 @@ $output .='
             </dd>
         </dl>
     </div>
+    <div class="col-md-12">
+    </div>
     <div class="col-md-6">
         <dl class="row">
-            <dt class="col-sm-4 info-box-label">CommAllow : <span class="field-required">*</span></dt>
+            <dt class="col-sm-4 info-box-label">รายการเบิก : <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">
-            <input name="CommAllow" value="'.$CommAllow.'" type="number" data-placement="top" required  class="form-control" min="1"  value="0"/>
+            <select class="form-control"  name="CommCode" required>
+            <option value="">Select</option>';
+            $strSQL = "SELECT * FROM tm02_commutealw";
+            $objQuery = mysqli_query($conn, $strSQL);
+             while($objResuut = mysqli_fetch_array($objQuery))
+             {
+               if($objResuut["CommCode"] == $CommCode)
+               {
+                 $sel = "selected";
+               }
+               else
+               {
+                 $sel = "";
+               }
+               $output.='<option value="'.$objResuut["CommCode"].'" '.$sel.'>'.$objResuut["CommCode"].' - '.$objResuut["CommTDesc"].'</option>';
+            
+             }
+             $output.='</select>      
             </dd>
         </dl>
     </div>
     <div class="col-md-6">
         <dl class="row">
-            <dt class="col-sm-4 info-box-label">CommCode : </dt>
+            <dt class="col-sm-4 info-box-label">CommAllow : <span class="field-required">*</span></dt>
             <dd class="col-sm-8 info-box-label">
-            <input type="text" value="'.$CommCode.'"  name="CommCode" placeholder="ระบุ CommCode" class="form-control"/>
+            <input name="CommAllow" value="'.$CommAllow.'" type="number" data-placement="top" required  class="form-control" min="1"  value="0"/>
             </dd>
         </dl>
     </div>
@@ -67,7 +86,7 @@ $output .='
         <div class="row">
 <!-- Blog Entries Column -->
 <div class="col-md-12">
-            <h1>Change Transportation</h1>
+            <h1>แก้ไขข้อมูลรายการขอเบิกค่าเดินทาง</h1>
             <hr>
             <div class="row">
             <div class="col-lg-12">

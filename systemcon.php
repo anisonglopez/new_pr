@@ -18,7 +18,7 @@ $DATA = mysqli_query($conn, $sql);
 
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-                <h1>Prepare for Monthly Closing</h1>
+                <h1>จัดเตรียมข้อมูลก่อนการประมวลผล</h1>
             <hr>
             
           

@@ -18,7 +18,7 @@ $DATA = mysqli_query($conn, $sql);
 
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-                <h1>Transportation Cost</h1>
+                <h1>รายการขอเบิกค่าเดินทาง</h1>
             <hr>
             
           
@@ -37,9 +37,9 @@ $DATA = mysqli_query($conn, $sql);
                                     <tr>
                                     <th scope="col">รหัสพนักงาน</th>
                                     <th scope="col">ชื่อพนักงาน</th>
-                                    <th scope="col">CommCode</th>
-                                    <th scope="col">CommAllow</th>
-                                    <th scope="col" style="text-align: left;">Remark</th>
+                                    <th scope="col">ชื่อรายการเบิก</th>
+                                    <th scope="col">จำนวนเงิน</th>
+                                    <th scope="col" style="text-align: left;">หมายเหตุ</th>
                                     <th scope="col" style="text-align: center;">Action</th>
                                     </tr>
                                 </thead>

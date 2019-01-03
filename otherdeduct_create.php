@@ -64,6 +64,8 @@ if($_SESSION['UserID'] == "")
                                 </dd>
                             </dl>
                         </div>
+                        <div class="col-md-12">
+                        </div>
                         <div class="col-md-6">
                             <dl class="row">
                                 <dt class="col-sm-4 info-box-label">เลือกประเภทการหักเงิน : <span class="field-required">*</span></dt>
@@ -84,17 +86,17 @@ if($_SESSION['UserID'] == "")
                                 </dd>
                             </dl>
                         </div>
-                        <div class="col-md-6">
+                        <!-- <div class="col-md-6">
                             <dl class="row">
                                 <dt class="col-sm-4 info-box-label">Count : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input type="text" name="count" placeholder="ระบุ Count" class="form-control"/>
                                 </dd>
                             </dl>
-                        </div>
+                        </div> -->
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">Amount : </dt>
+                                <dt class="col-sm-4 info-box-label">จำนวนเงินที่หัก : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="Amount" type="number" data-placement="top" required  class="form-control" min="1"  value="0"/>
                                 </dd>
@@ -102,7 +104,7 @@ if($_SESSION['UserID'] == "")
                         </div>      
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">Remark : </dt>
+                                <dt class="col-sm-4 info-box-label">หมายเหตุ : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                  <textarea  class="form-control" rows="3" name="Remark" id="Remark" placeholder="ระบุหมายเหตุ"></textarea>
                                 </dd>
@@ -110,7 +112,7 @@ if($_SESSION['UserID'] == "")
                         </div>   
                         <div class="col-md-12">
                             <dl class="row">
-                                <dt class="col-sm-2 info-box-label">Tax Calculate Flag : </dt>
+                                <dt class="col-sm-2 info-box-label">นำไปคำนวณภาษี : </dt>
                                 <dd class="col-sm-2">
                                 <div class="material-switch">
                                 <input id="TaxCalFlag" name="TaxCalFlag" type="checkbox" value="1"/>

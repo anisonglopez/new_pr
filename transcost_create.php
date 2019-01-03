@@ -10,7 +10,7 @@ if($_SESSION['UserID'] == "")
         <div class="row">
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-            <h1>Create Transpotation Cost</h1>
+            <h1>เพิ่มรายการขอเบิกค่าเดินทาง</h1>
             <hr>
             <div class="row">
                 <div class="col-lg-12">
@@ -56,10 +56,32 @@ if($_SESSION['UserID'] == "")
 				</script>
                                 </dd>
                             </dl>
+                        </div>                
+                        <div class="col-md-12">
                         </div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">CommAllow : <span class="field-required">*</span></dt>
+                                <dt class="col-sm-4 info-box-label">รายการเบิก : <span class="field-required">*</span></dt>
+                                <dd class="col-sm-8 info-box-label">
+                                <select class="form-control"  name="CommCode" required>
+                         <option value="">Select</option>   
+                                        <?php
+                                        $strSQL = "SELECT * FROM tm02_commutealw";
+                                        $objQuery = mysqli_query($conn, $strSQL);
+                                        while($objResuut = mysqli_fetch_array($objQuery))
+                                        {
+                                        ?>
+                                            <option value="<?=$objResuut["CommCode"];?>"><?=$objResuut["CommCode"]." - ".$objResuut["CommTDesc"];?></option>
+                                        <?php
+                                        }
+                                        ?>
+                        </select>      
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <dl class="row">
+                                <dt class="col-sm-4 info-box-label">จำนวนเงิน : <span class="field-required">*</span></dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="CommAllow" type="number" data-placement="top" required  class="form-control" min="1"  value="0"/>
                                 </dd>
@@ -67,15 +89,7 @@ if($_SESSION['UserID'] == "")
                         </div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">CommCode : </dt>
-                                <dd class="col-sm-8 info-box-label">
-                                <input type="text" name="CommCode" placeholder="ระบุ CommCode" class="form-control"/>
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <dl class="row">
-                                <dt class="col-sm-4 info-box-label">Remark : </dt>
+                                <dt class="col-sm-4 info-box-label">หมายเหตุ : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <textarea  class="form-control" rows="3" name="Remark" id="Remark" placeholder="ระบุหมายเหตุ"></textarea>
                                 </dd>

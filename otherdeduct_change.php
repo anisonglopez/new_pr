@@ -41,6 +41,8 @@ if(isset($_GET["id"])) {
         </dd>
     </dl>
 </div>
+<div class="col-md-12">
+</div>
 <div class="col-md-6">
     <dl class="row">
         <dt class="col-sm-4 info-box-label">เลือกประเภทการหักเงิน : <span class="field-required">*</span></dt>
@@ -66,6 +68,7 @@ if(isset($_GET["id"])) {
         </dd>
     </dl>
 </div>
+<!--
 <div class="col-md-6">
     <dl class="row">
         <dt class="col-sm-4 info-box-label">Count : </dt>
@@ -74,9 +77,10 @@ if(isset($_GET["id"])) {
         </dd>
     </dl>
 </div>
+-->
 <div class="col-md-6">
     <dl class="row">
-        <dt class="col-sm-4 info-box-label">Amount : </dt>
+        <dt class="col-sm-4 info-box-label">จำนวนเงินที่หัก : </dt>
         <dd class="col-sm-8 info-box-label">
         <input name="Amount" type="number" value="'.$Amount.'" data-placement="top" required  class="form-control" min="1"  value="0"/>
         </dd>
@@ -84,7 +88,7 @@ if(isset($_GET["id"])) {
 </div>      
 <div class="col-md-6">
     <dl class="row">
-        <dt class="col-sm-4 info-box-label">Remark : </dt>
+        <dt class="col-sm-4 info-box-label">หมายเหตุ : </dt>
         <dd class="col-sm-8 info-box-label">
          <textarea  class="form-control" rows="3" name="Remark" id="Remark" placeholder="ระบุหมายเหตุ">'.$Remark.'</textarea>
         </dd>
@@ -92,7 +96,7 @@ if(isset($_GET["id"])) {
 </div>   
 <div class="col-md-12">
     <dl class="row">
-        <dt class="col-sm-2 info-box-label">Tax Calculate Flag : </dt>
+        <dt class="col-sm-2 info-box-label">นำไปคำนวณภาษี : </dt>
         <dd class="col-sm-2">
         <div class="material-switch">
         <input id="TaxCalFlag" name="TaxCalFlag" type="checkbox" '.$checked .'  value="1"/>
@@ -110,7 +114,7 @@ if(isset($_GET["id"])) {
         <div class="row">
 <!-- Blog Entries Column -->
 <div class="col-md-12">
-            <h1>Change Other Deduct</h1>
+            <h1>แก้ไขรายการหัก</h1>
             <hr>
             <div class="row">
             <div class="col-lg-12">

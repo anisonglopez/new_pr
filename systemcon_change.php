@@ -70,7 +70,7 @@ if(isset($_GET["id"])) {
         <div class="title-header-info-box add-pad">
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active " data-toggle="tab" href="#tab1" id="tabspecification" role="tab">Period</a>
+                    <a class="nav-link active " data-toggle="tab" href="#tab1" id="tabspecification" role="tab">รายละเอียดการเปิดรอบการคำนวณ</a>
                 </li>
             </ul>
         </div>
@@ -148,7 +148,7 @@ if(isset($_GET["id"])) {
         <div class="row">
 <!-- Blog Entries Column -->
 <div class="col-md-12">
-            <h1>Change Prepare for Monthly Closing</h1>
+            <h1>แก้ไขข้อมูลจัดเตรียมข้อมูลก่อนการประมวลผล</h1>
             <hr>
             <div class="row">
             <div class="col-lg-12">

@@ -39,7 +39,7 @@
         <ul class="dropdown-menu">
           <li><a href="otherdeduct.php">รายการหัก</a></li>
           <li><a href="otherallowance.php">รายได้อื่น ๆ</a></li>
-          <li><a href="transcost.php">ค่าเดินทาง</a></li>
+          <li><a href="transcost.php">รายการขอเบิกค่าเดินทาง</a></li>
           <li><a href="positionallow.php">เงินประจำตำแหน่ง</a></li>
         </ul>
       </li>
