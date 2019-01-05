@@ -148,7 +148,7 @@ if(isset($_GET["id"])) {
         <div class="row">
 <!-- Blog Entries Column -->
 <div class="col-md-12">
-            <h1>แก้ไขข้อมูลจัดเตรียมข้อมูลก่อนการประมวลผล</h1>
+            <h1>แก้ไขข้อมูลการเปิดรอบการคำนวณ</h1>
             <hr>
             <div class="row">
             <div class="col-lg-12">

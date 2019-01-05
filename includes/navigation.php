@@ -15,11 +15,12 @@
                 <ul class="nav navbar-nav">
                     <li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">ประมวลผลประจำรอบ
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">คำนวณค่าจ้าง
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                              <li><a href="systemcon.php">จัดเตรียมข้อมูลก่อนการประมวลผล</a></li>
+                              <li><a href="systemcon.php">เปิดรอบการคำนวณ</a></li>
                               <li><a href="monthlyclosingprocress.php">ประมวลผลค่าจ้าง</a></li>
+                              <li><a href="#">ปรับปรุงรายการ</a></li>
                             </ul>
                           </li>
                     </li>
