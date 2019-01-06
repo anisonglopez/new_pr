@@ -72,7 +72,7 @@ if($_SESSION['UserID'] == "")
                             <dl class="row">
                                 <dt class="col-sm-4 info-box-label">1.0: </dt>
                                 <dd class="col-sm-8 info-box-label">
-                                <input name="OVT10" type="number" data-placement="top"  class="form-control"  min="0"  maxlength="20" value="0"/>   
+                                <input name="OVT10" type="number" data-placement="top"  class="form-control"  min="0"  step="any" value="0"/>   
                                 </dd>
                             </dl>
                         </div>  
@@ -80,7 +80,7 @@ if($_SESSION['UserID'] == "")
                             <dl class="row">
                                 <dt class="col-sm-4 info-box-label">1.5 : </dt>
                                 <dd class="col-sm-8 info-box-label">
-                                <input name="OVT15" type="number" data-placement="top"  class="form-control"  min="0"  maxlength="20" value="0"/>   
+                                <input name="OVT15" type="number" data-placement="top"  class="form-control"  min="0" step="any"  value="0"/>   
                                 </dd>
                             </dl>
                         </div>  
@@ -88,7 +88,7 @@ if($_SESSION['UserID'] == "")
                             <dl class="row">
                                 <dt class="col-sm-4 info-box-label">2.0 : </dt>
                                 <dd class="col-sm-8 info-box-label">
-                                <input name="OVT20" type="number" data-placement="top"  class="form-control"  min="0"  maxlength="20" value="0"/>   
+                                <input name="OVT20" type="number" data-placement="top"  class="form-control"  min="0"  step="any"  value="0"/>   
                                 </dd>
                             </dl>
                         </div>  
@@ -96,7 +96,7 @@ if($_SESSION['UserID'] == "")
                             <dl class="row">
                                 <dt class="col-sm-4 info-box-label">2.5 : </dt>
                                 <dd class="col-sm-8 info-box-label">
-                                <input name="OVT25" type="number" data-placement="top"  class="form-control"  min="0"  maxlength="20" value="0"/>   
+                                <input name="OVT25" type="number" data-placement="top"  class="form-control"  min="0"  step="any"  value="0"/>   
                                 </dd>
                             </dl>
                         </div>  
@@ -104,7 +104,7 @@ if($_SESSION['UserID'] == "")
                             <dl class="row">
                                 <dt class="col-sm-4 info-box-label">3.0 : </dt>
                                 <dd class="col-sm-8 info-box-label">
-                                <input name="OVT30" type="number" data-placement="top"  class="form-control"  min="0"  maxlength="20" value="0"/>   
+                                <input name="OVT30" type="number" data-placement="top"  class="form-control"  min="0"   value="0"/>   
                                 </dd>
                             </dl>
                         </div>  

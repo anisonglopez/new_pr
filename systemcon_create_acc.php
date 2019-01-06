@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+//error_reporting(0);
 session_start();
 if($_SESSION['UserID'] == "")
 {
@@ -8,39 +8,29 @@ if($_SESSION['UserID'] == "")
 }
 ?>
 <?php include("includes/header.php"); ?>
-<?php
-if(isset($_POST["create"])) {
-    $ConvertPeriodDate = date("Ym", strtotime($_POST["period"]));
-    $SysPgmID = "FT05_PrepareMonthlyData";
-    date_default_timezone_set("Asia/Bangkok");
-    $date = date('Y-m-d H:i:s');
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $strSQL = "INSERT INTO tm00_control ";
-    $strSQL .="(Period, Term, EmplType, FmAttnDate, ToAttnDate, FmOVTDate, ToOVTDate, FmLevDate, ToLevDate,  PayDate, SysUpdDate, SysUserID, SysPgmID, Holiday) ";
-    $strSQL .="VALUES ";
-    $strSQL .="('".$ConvertPeriodDate."', '".($_POST["term"])."', '".($_POST["EmplType"])."',
- '".($_POST["salary_date_from"])."', '".($_POST["salary_date_to"])."', '".($_POST["overtime_date_from"])."', '".($_POST["overtime_date_to"])."', 
- '".($_POST["lev_date_from"])."', '".($_POST["lev_date_to"])."', '".($_POST["paydate"])."', 
- '".$date. "' , '" .$_POST["user_login"]."' , '".$SysPgmID."' , '".$_POST["Holiday"]."')";
-    //$strSQL .="('".mysqli_real_escape_string($_POST["period"])."', '"($_POST["term"])."', '".mysqli_real_escape_string($_POST["emp_type"])."', '".($_POST["salary_date_from"])."', '".$_POST["salary_date_to"]. "' , '" .$_POST["overtime_date_from"]."' ,'" .$_POST["overtime_date_to"]."' , '" .$_POST["user_login"]."' , 'FM01_User' )";
-    $objQuery = mysqli_query($conn, $strSQL);
-    if($objQuery)
-    {
-        $result = 'ทำการบันทึกข้อมูลสำเร็จ';
-    }
-    else
-    {
-        $result = 'ขออภัย! เนื่องจากมีรหัส Period นี้แล้วในระบบ ไม่สามารถทำการบันทึกข้อมูลได้';
-    }
-    }
-}
-?>
+
 <div class="row">
     <!-- Blog Entries Column -->
     <div class="col-md-8">
-    <?php echo $result; ?>
+    <input type="text" value="<?php echo $_POST['period'] ?>" id="period" />
+    <input type="text" value="<?php echo $_POST['term'] ?>" id="term" />
+    <input type="text" value="<?php echo $_POST['EmplType'] ?>" id="EmplType" />
+    <input type="text" value="<?php echo $_POST['salary_date_from'] ?>" id="salary_date_from" />
+    <input type="text" value="<?php echo $_POST['salary_date_to'] ?>" id="salary_date_to" />
+    <input type="text" value="<?php echo $_POST['overtime_date_from'] ?>" id="overtime_date_from" />
+    <input type="text" value="<?php echo $_POST['overtime_date_to'] ?>" id="overtime_date_to" />
+    <input type="text" value="<?php echo $_POST['lev_date_from'] ?>" id="lev_date_from" />
+    <input type="text" value="<?php echo $_POST['lev_date_to'] ?>" id="lev_date_to" />
+    <input type="text" value="<?php echo $_POST['paydate'] ?>" id="paydate" />
+    <input type="text" value="<?php echo $_POST['Holiday'] ?>" id="Holiday" />
     <a href="systemcon.php">กลับ</a>
+    <!--  ajax ส่งค่ากลับ-->
+    <div id="loading-image" style="display:none; text-align: center;" >
+                            <img src="img/loading_gif/flat-progress-bar-stripe-loader.gif" /> กรุณารอซักครู่.... ระบบกำลังโหลดข้อมูล
+                        </div>           
+                        <div id="table_detail"></div>
     </div>
+       <!--  ajax ส่งค่ากลับ-->
 
     <!-- Blog Sidebar Widgets Column -->
     <div class="col-md-4">
@@ -49,3 +39,45 @@ if(isset($_POST["create"])) {
 </div>
 <!-- /.row -->
 <?php include("includes/footer.php"); ?>
+<script>
+$(document).ready(function() {
+    var period=document.getElementById("period").value; 
+    var term=document.getElementById("term").value; 
+    var EmplType=document.getElementById("EmplType").value; 
+    var salary_date_from=document.getElementById("salary_date_from").value; 
+    var salary_date_to=document.getElementById("salary_date_to").value; 
+    var overtime_date_from=document.getElementById("overtime_date_from").value; 
+    var overtime_date_to=document.getElementById("overtime_date_to").value; 
+    var lev_date_from=document.getElementById("lev_date_from").value; 
+    var lev_date_to=document.getElementById("lev_date_to").value; 
+    var paydate=document.getElementById("paydate").value; 
+    var Holiday=document.getElementById("Holiday").value; 
+
+    $.ajax({  
+            url:"systemcon_ajax_monthlypaid_datatable.php",  
+                method:"post",  
+                data:{period:period,
+                    term:term,
+                    EmplType:EmplType,
+                    salary_date_from:salary_date_from,
+                    salary_date_to:salary_date_to,
+                    overtime_date_from:overtime_date_from,
+                    overtime_date_to:overtime_date_to,
+                    lev_date_from:lev_date_from,
+                    lev_date_to:lev_date_to,
+                    paydate:paydate,
+                    Holiday:Holiday},   
+                    beforeSend: function() {
+                        $("#loading-image").show();
+                    },
+                success:function(data){          
+                    $('#table_detail').html(data);  
+                    $("#loading-image").hide();
+                },
+                error: function (jqXHR, exception) {
+                    document.write(exception);
+                }
+        });  
+ });
+</script>
+
