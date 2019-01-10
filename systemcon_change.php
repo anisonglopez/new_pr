@@ -15,6 +15,9 @@ if(isset($_GET["id"])) {
     $objQuery = mysqli_query($conn, $strSQL); 
     while ($rows = mysqli_fetch_array($objQuery)) {    
         $Period_date = $rows["Period"];
+        $Term = $rows["Term"];
+        $EmplType = $rows["EmplType"];
+
         $ConvertPeriodDate = date("Ym", strtotime($Period_date));
         if ($rows["EmplType"] == M){
             $EmplString = "รายเดือน";
@@ -127,7 +130,7 @@ if(isset($_GET["id"])) {
                 <dl class="row">
                     <dt class="col-sm-3 info-box-label">วันหยุดของบริษัท (วัน) : </dt>
                     <dd class="col-sm-3 info-box-label">
-                    <input name="Holiday" type="number" min="0" class="form-control" value="'.$rows["Holiday"].'"/ >      
+                    <input name="Holiday" type="number" min="0" class="form-control" value="'.$rows["Holiday"].'" disabled/ >      
                     </dd>
                     <dt class="col-sm-1 info-box-label"></dt>
                     <dd class="col-sm-3 info-box-label">
@@ -164,12 +167,85 @@ if(isset($_GET["id"])) {
                     </div>
                     <div class="panel-body" onload="Holiday_Function()">
                     <?php  echo $output;?>
+                    </form>
+
+                    <p>แสดงรายการข้อมูลพนักงาน</p>
+                    <?php
+                    $output = "";
+$sql_select_prepare_emp_closing = "SELECT tt05_monthlypaid.* ,  tm03_employee.EmplTName ,tm02_department.DeptEDesc
+FROM tt05_monthlypaid 
+JOIN tm03_employee ON tm03_employee.EmplCode = tt05_monthlypaid.EmplCode 
+JOIN tm02_department ON tm03_employee.DeptCode = tm02_department.DeptCode 
+WHERE tt05_monthlypaid.Period='$Period_date' AND tt05_monthlypaid.Term='$Term' AND tt05_monthlypaid.EmplType='$EmplType' " ;
+
+$emp_closing_DATA = mysqli_query($conn, $sql_select_prepare_emp_closing);
+$output.= '<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+<thead>
+                            <tr>
+                            <th scope="col">รหัสพนักงาน</th>
+                            <th scope="col" style="text-align : center;">ชื่อพนักงาน</th>
+                            <th scope="col" style="text-align : center;">แผนก</th>
+                            <th scope="col" style="text-align : center;">เงินเดือน</th>
+                            <th scope="col" style="text-align : center;">วันที่ทำงาน</th>
+                            <th scope="col" style="text-align : center;">วันที่ลาป่วย</th>
+                            <th scope="col" style="text-align: center;">วันหยุดที่จ่ายเงิน</th>
+                            <th scope="col" style="text-align: center;">เงินค่าครองชีพ</th>
+                            <th scope="col" style="text-align: center;">เงินประจำตำแหน่ง</th>
+                            </tr>
+                        </thead>
+                        <tbody>';
+
+                        while ($rows = mysqli_fetch_array($emp_closing_DATA)) {
+                            $EmplCode = $rows['EmplCode'];
+                            $EmplTName = $rows['EmplTName'];
+                            //$EmplType = ($rows['EmplType'] == 'M') ? "รายเดือน" : "รายวัน";
+                            $DeptEDesc = $rows['DeptEDesc'];
+                            $Salary = $rows['Salary'];
+                            $Work_Days = $rows['Work_Days'];
+                            $Sick_days = $rows['Sick_days'];
+                            $CountHoliday = $rows['CountHoliday'];
+                            $LiveAllow = $rows['LiveAllow'];
+                            $PosiAllow = $rows['PosiAllow'];
+
+                            $output.='  <tr>
+                            <td style="text-align: center;"> '.$EmplCode.'</td>
+                            <td >'.$EmplTName.'</td>
+                            <td>'.$DeptEDesc.'</td>
+                            <td style="text-align: center;">'.$Salary.'</td>
+                            <td style="text-align: center;">'.$Work_Days.'</td>
+                            <td style="text-align: center;">'.$Sick_days.'</td>
+                            <td style="text-align: center;">'.$CountHoliday.'</td>
+                            <td style="text-align: center;">'.$LiveAllow.'</td>
+                            <td style="text-align: center;">'.$PosiAllow.'</td>
+                        </tr>';
+                        }
+
+$output.='
+                        </tbody>
+</table>' ;
+
+                    ?>
+                    <?php echo $output;?>
                     </div>
-                </form>
+
+                
 <br>
 </div>
+</div>
+</div>
+</div>
+</div>
+
 <!-- Blog Sidebar Widgets Column -->
 <!-- /.row -->
 
 <?php include("includes/footer.php"); ?>
+<script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true,
+            "order": [[ 0, "desc" ], [ 1, 'desc' ]]
+        });
+    });
+    </script>
 
