@@ -44,9 +44,7 @@
           <li><a href="positionallow.php">เงินประจำตำแหน่ง</a></li>
         </ul>
       </li>
-                     <li>
-                        <a href="#">รายงาน</a>
-                    </li>
+                  
                     <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">ข้อมูลตั้งต้น
         <span class="caret"></span></a>
@@ -72,8 +70,10 @@
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+
       <li>
-      <a href="#"><span class="glyphicon glyphicon-bell"></span> การแจ้งเตือน</a>
+      <a  href="report_menu.php">รายงาน</a>
+      <!-- <a href="#"><span class="glyphicon glyphicon-bell"></span> การแจ้งเตือน</a> -->
       </li>
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['UserID']; ?>

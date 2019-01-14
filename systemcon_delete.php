@@ -16,6 +16,9 @@ if(isset($_GET["id"])) {
     $result = "";
     if($objQuery)
   {
+    $strSQL_m = "DELETE FROM tt05_monthlypaid ";
+    $strSQL_m .="WHERE Period = '".$_GET["Period"]."' AND Term = '".$_GET["Term"]."' AND EmplType = '".$_GET["EmplType"]."' ";
+    $objQuery = mysqli_query($conn, $strSQL_m);
     $result = 'ทำการลบข้อมูลสำเร็จ';
     //   echo '<script>window.location.href="employee.php"</script>';
      // $result = '<script> alert("ทำการลบข้อมูลสำเร็จ");</script>';

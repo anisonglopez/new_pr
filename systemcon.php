@@ -48,17 +48,17 @@ $DATA = mysqli_query($conn, $sql);
                                 <?php
   while ($rows = mysqli_fetch_array($DATA)) {
     $id = $rows['auto_increment'];
-    $row1 = $rows['Period'];
-    $row2 = $rows['Term'];
-    $row3 = $rows['EmplType'];
+    $Period = $rows['Period'];
+    $Term = $rows['Term'];
+    $EmplType = $rows['EmplType'];
     $row4 = $rows['FmAttnDate'];
     $row5 = $rows['ToAttnDate'];
     $row6 = $rows['PayDate'];
-    if( $row3 == "D"){
-      $row3 = "รายวัน";
+    if( $EmplType == "D"){
+      $EmplString = "รายวัน";
     }
     else{
-      $row3 = "รายเดือน";
+      $EmplString = "รายเดือน";
     }
     if ($row6 == "0000-00-00"){
         $row6  = "";
@@ -68,9 +68,9 @@ $DATA = mysqli_query($conn, $sql);
     }
   ?>
                                 <tr>
-                                <td><?php echo $row1; ?></td>
-                                <td style="text-align: center;"><?php echo $row2; ?></td>
-                                <td style="text-align: center;"><?php echo $row3; ?></td>
+                                <td><?php echo $Period; ?></td>
+                                <td style="text-align: center;"><?php echo $Term; ?></td>
+                                <td style="text-align: center;"><?php echo $EmplString; ?></td>
                                 <td style="text-align: center;"><?php echo date("d/m/Y", strtotime($row4));?></td>
                                 <td style="text-align: center;"><?php echo date("d/m/Y", strtotime($row5)); ?></td>
                                 <td style="text-align: center;"><?php echo $row6?></td>
@@ -79,7 +79,7 @@ $DATA = mysqli_query($conn, $sql);
                                 <a href="systemcon_change.php?id=<?php echo $id?>">
                                 <button  class="btn btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
                                 </a>
-                                <a href="JavaScript:if(confirm('Confirm Delete?')==true){window.location='systemcon_delete.php?id=<?php echo $id?>';}">
+                                <a href="JavaScript:if(confirm('Confirm Delete?')==true){window.location='systemcon_delete.php?id=<?php echo $id?>&Period=<?php echo $Period?>&Term=<?php echo $Term ?>&EmplType=<?php echo $EmplType ?>';}">
                             <button  class="btn btn-danger delete_id"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
                             </a>
                             </center>
