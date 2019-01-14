@@ -86,8 +86,8 @@ if($_SESSION['UserID'] == "")
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form action="report_pdf/payslip_report.php" method="get" target="_blank">
       <div class="modal-body">
-      <form action="employee_create_acc" method="get"></form>
         <div class="row">
             <div class="col-md-12">
                     <dl class="row">
@@ -96,7 +96,7 @@ if($_SESSION['UserID'] == "")
                     <select class="form-control"  name="Period" required>
                          <option value="">Select</option>   
                           <?php
-                          $strSQL = "SELECT * FROM tm00_control ORDER BY  Period DESC";
+                          $strSQL = "SELECT DISTINCT Period  FROM tm00_control ORDER BY  Period DESC";
                          $objQuery = mysqli_query($conn, $strSQL);
                           while($objResuut = mysqli_fetch_array($objQuery))
                           {
@@ -142,7 +142,7 @@ if($_SESSION['UserID'] == "")
                     </dd>
                     <dt class="col-sm-1 info-box-label">ถึง : </dt>
                     <dd class="col-sm-4 info-box-label">
-                    <select class="form-control"  name="DeptCode_to" required>
+                    <select class="form-control"  name="DeptCode_to" >
                          <option value="">Select</option>   
                           <?php
                           $strSQL = "SELECT * FROM tm02_department Order by DeptCode DESC";
@@ -163,11 +163,11 @@ if($_SESSION['UserID'] == "")
             <dl class="row">
                     <dt class="col-sm-2 info-box-label">รหัสพนักงาน จาก : </dt>
                     <dd class="col-sm-4 info-box-label">
-                    <input name="PosiCode" type="text" data-placement="top" required  class="form-control" maxlength="5" placeholder="00000" />      
+                    <input name="EmplCode_from" type="text" data-placement="top"   class="form-control" maxlength="5" placeholder="00000" />      
                     </dd>
                     <dt class="col-sm-1 info-box-label">ถึง : </dt>
                     <dd class="col-sm-4 info-box-label">
-                    <input name="PosiCode" type="text" data-placement="top" required  class="form-control" maxlength="5" placeholder="99999" />      
+                    <input name="EmplCode_to" type="text" data-placement="top"   class="form-control" maxlength="5" placeholder="99999" />      
                     </dd>
                 </dl>
             </div>
@@ -177,7 +177,8 @@ if($_SESSION['UserID'] == "")
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Download</button>
+        <button type="submit" class="btn btn-primary">Download</button>
+        </form>
       </div>
     </div>
   </div>
