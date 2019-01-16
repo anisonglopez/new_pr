@@ -19,6 +19,7 @@ if(isset($_GET["EmplCode"])) {
       $posicode = $rows["PosiCode"];
       $branchcode = $rows["BranchCode"];
       $Marital = $rows["Marital"];
+      $emp_pic = $rows["emp_pic"];
       $Sex = $rows["Sex"];
       if ($rows["EmplType"] == "M"){
         $EmplMSe= "selected";
@@ -95,8 +96,34 @@ $output = "";
         </dd>
        </dl>
       </div>
-      <div class="col-md-2"></div>
-      
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+
+
+  <p><label for="image">รูปประจำตัวพนักงาน :</label>
+   <div id="preview">
+          <img width="200px" height="250px" src="file_upload/emp_img/'.$emp_pic.' " id="blah" src="#" class="img-thumbnail-personal img-box" />
+      </div>
+  <input type="file" name="emp_pic" onchange="readURL(this);" id="emp_pic" class="btn"/></p>
+  <p>* ควรอัพโหลดเป็นรูปภาพแนวตั้ง</p>
+
+      </div> '; ?>
+<script>
+function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
+              reader.onload = function (e) {
+                  $('#blah')
+                      .attr('src', e.target.result)
+                      .width(200)
+                      .height(250);
+              };
+
+              reader.readAsDataURL(input.files[0]);
+          }
+      }
+</script>
+<?php $output .='
       <div class="col-md-12">
       <br>
 <!--Start-->

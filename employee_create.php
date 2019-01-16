@@ -75,14 +75,14 @@ if($_SESSION['UserID'] == "")
         <div class="col-md-1"></div>
         <div class="col-md-4">
 
-<!--
+
     <p><label for="image">รูปประจำตัวพนักงาน :</label>
      <div id="preview">
-            <img width="200px" height="250px" src="profile pic.jpg" id="blah" src="#" class="img-thumbnail-personal" />
+            <img width="200px" height="250px" src="profile pic.jpg" id="blah" src="#" class="img-thumbnail-personal img-box" />
         </div>
     <input type="file" name="emp_pic" onchange="readURL(this);" id="emp_pic" class="btn"/></p>
     <p>* ควรอัพโหลดเป็นรูปภาพแนวตั้ง</p>
--->
+
         </div>
 <script>
   function readURL(input) {

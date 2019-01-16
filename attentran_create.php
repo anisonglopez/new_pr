@@ -94,7 +94,7 @@ if($_SESSION['UserID'] == "")
                         </div>      
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">Time in : </dt>
+                                <dt class="col-sm-4 info-box-label">จากเวลา : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="TIMEin" type="time" data-placement="top" required  class="form-control" min="1"  value="08:00" id="TIMEin" />
                                 </dd>
@@ -102,7 +102,7 @@ if($_SESSION['UserID'] == "")
                         </div>      
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">Time out : </dt>
+                                <dt class="col-sm-4 info-box-label">ถึงเวลา : </dt>
                                 <dd class="col-sm-8 info-box-label">
                                 <input name="TIMEout" type="time" data-placement="top" required  class="form-control" min="1"  value="17:30" id="TIMEout" />
                                 </dd>
@@ -121,7 +121,7 @@ if($_SESSION['UserID'] == "")
                         <div class="col-md-12"></div>
                         <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">Deduct Flag : </dt>
+                                <dt class="col-sm-4 info-box-label">หักเงินใช่หรือไม่ : </dt>
                                 <dd class="col-sm-8">
                                 <div class="material-switch">
                                 <input id="Ded_Flag" name="Ded_Flag" type="checkbox" value="1"/>
@@ -133,9 +133,9 @@ if($_SESSION['UserID'] == "")
 
                              <div class="col-md-6">
                             <dl class="row">
-                                <dt class="col-sm-4 info-box-label">อัตราหัก : </dt>
+                                <dt class="col-sm-4 info-box-label">% การหัก : </dt>
                                 <dd class="col-sm-8 info-box-label">
-                                <input id="Ded_Rate" name="Ded_Rate" type="number" data-placement="top" required  class="form-control" min="0"  value="0" disabled/>
+                                <input id="Ded_Rate" name="Ded_Rate" type="number" data-placement="top" required  class="form-control" min="0"  max="100"  value="0" disabled/>
                                 </dd>
                             </dl>
                         </div>     

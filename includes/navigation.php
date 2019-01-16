@@ -20,7 +20,7 @@
                             <ul class="dropdown-menu">
                               <li><a href="systemcon.php">เปิดรอบการคำนวณ</a></li>
                               <li><a href="monthlyclosingprocress.php">ประมวลผลค่าจ้าง</a></li>
-                              <li><a href="#">ปรับปรุงรายการ</a></li>
+                              <li><a href="monthlypaid.php">ปรับปรุงรายการ</a></li>
                             </ul>
                           </li>
                     </li>
