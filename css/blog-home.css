@@ -85,3 +85,53 @@ footer {
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.user_avatar{
+  max-width: 20px;
+}
+.navbar-inverse {
+  background-color: #003b56;
+  border-color: #080808;
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: #ffffff;
+}
+.navbar-inverse .navbar-brand {
+  color: #ff9c9c;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: #ffffff;
+  background-color: #6f7de4;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+  color: #fff;
+  background-color: #6f7de4;
+}
+/* Dashboard */
+.panel-green {
+  border-color: #5cb85c;
+}
+.panel-green>.panel-heading {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+.huge {
+  font-size: 40px;
+}
+.panel-yellow {
+  border-color: #f0ad4e;
+}
+.panel-yellow > .panel-heading {
+  border-color: #f0ad4e;
+  color: white;
+  background-color: #f0ad4e;
+}
+.panel-red {
+  border-color: #d9534f;
+}
+.panel-red > .panel-heading {
+  border-color: #d9534f;
+  color: white;
+  background-color: #d9534f;
+}
+/* Dashboard */

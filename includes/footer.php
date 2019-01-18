@@ -5,7 +5,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Payroll Management System 2018 | Last Update 05/01/2019</p>
+                    <p>Copyright &copy; Payroll Management System 2018 | Last Update 18/01/2019</p>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>

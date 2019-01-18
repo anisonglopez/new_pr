@@ -26,7 +26,9 @@
                     </li>
                      <!-- time sheet -->
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Time Sheet
+      
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span><img src="img/Time-32.png" alt="avatar" class="user_avatar"> </span>Time Sheet
+        
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="attentran.php">ประวัติการลงเวลา</a></li>
@@ -72,15 +74,15 @@
                 <ul class="nav navbar-nav navbar-right">
 
       <li>
-      <a  href="report_menu.php">รายงาน</a>
+      <a  href="report_menu.php"><span><img src="img/Reports-32.png" alt="avatar" class="user_avatar"> </span>รายงาน</a>
       <!-- <a href="#"><span class="glyphicon glyphicon-bell"></span> การแจ้งเตือน</a> -->
       </li>
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['UserID']; ?>
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span><img src="img/cd-avatar.png" alt="avatar" class="user_avatar"> </span><?php echo $_SESSION['UserID']; ?>
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="userprofile.php">User Profile</a></li>
-          <li><a href="includes/logout.php">Log Out</a></li>
+          <li><a href="userprofile.php">จัดการข้อมูลผู้ใช้งาน</a></li>
+          <li><a href="includes/logout.php">ออกจากระบบ</a></li>
         </ul>
       </li>
     </ul>
