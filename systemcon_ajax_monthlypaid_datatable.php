@@ -115,6 +115,7 @@ include "config/connect.php";
             $CountShft = $O_Shft_D_PM + $M_Shft_D_PM + $E_Shft_D_PM +  $N_Shft_D_PM ;
             $CountPayTotal = $CountHoliday +$CountPayLeave +$CountShft - $CountLate ;
             $Work_Days = $CountPayTotal;  //ok
+            $Work_Days = ($EmplType == "M" ? 30 : $Work_Days);
             // work day
             $Sick_days = 0; //ok
             $Salary_Cal = $Salary; //ok
