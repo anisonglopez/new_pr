@@ -186,7 +186,7 @@ $output.= '<table width="100%" class="table table-striped table-bordered table-h
                             <th scope="col" style="text-align : center;">ชื่อพนักงาน</th>
                             <th scope="col" style="text-align : center;">แผนก</th>
                             <th scope="col" style="text-align : center;">เงินเดือน</th>
-                            <th scope="col" style="text-align : center;">วันที่ทำงาน</th>
+                            <th scope="col" style="text-align : center;">จำนวนวันทำงาน(วัน)</th>
                             <th scope="col" style="text-align : center;">วันที่ลาป่วย</th>
                             <th scope="col" style="text-align: center;">วันหยุดที่จ่ายเงิน</th>
                             <th scope="col" style="text-align: center;">เงินค่าครองชีพ</th>

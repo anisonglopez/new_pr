@@ -1,5 +1,5 @@
 <?php
-//error_reporting(0);
+error_reporting(0);
 session_start();
 if($_SESSION['UserID'] == "")
 {
@@ -25,7 +25,6 @@ include "config/connect.php";
  '".$date. "' , '" .$_SESSION['UserID']."' , '".$SysPgmID."' , '".$_POST["Holiday"]."')";
     //$strSQL .="('".mysqli_real_escape_string($_POST["period"])."', '"($_POST["term"])."', '".mysqli_real_escape_string($_POST["emp_type"])."', '".($_POST["salary_date_from"])."', '".$_POST["salary_date_to"]. "' , '" .$_POST["overtime_date_from"]."' ,'" .$_POST["overtime_date_to"]."' , '" .$_POST["user_login"]."' , 'FM01_User' )";
     $objQuery = mysqli_query($conn, $strSQL);
-// echo $strSQL_query_emp;
     if($objQuery)
     {
         $strSQL_query_systemcondition = "SELECT * from tm01_system_condition ";
@@ -508,7 +507,7 @@ include "config/connect.php";
                                             <th scope="col" style="text-align : center;">ชื่อพนักงาน</th>
                                             <th scope="col" style="text-align : center;">แผนก</th>
                                             <th scope="col" style="text-align : center;">เงินเดือน</th>
-                                            <th scope="col" style="text-align : center;">วันที่ทำงาน</th>
+                                            <th scope="col" style="text-align : center;">จำนวนวันทำงาน(วัน)</th>
                                             <th scope="col" style="text-align : center;">วันที่ลาป่วย</th>
                                             <th scope="col" style="text-align: center;">วันหยุดที่จ่ายเงิน</th>
                                             <th scope="col" style="text-align: center;">เงินค่าครองชีพ</th>
