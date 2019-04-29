@@ -80,10 +80,11 @@ if($_SESSION['UserID'] == "")
                     $AttnCode = ($AttnCode== NULL) ? "<p style='color: red;'>error ข้อมูลหายไป</p>" : $AttnCode;
                     //เวลาเข้า
                     $TIMEin = $getData[3];
-                    $TIMEin = ($TIMEin== NULL or "NULL") ? "00:00:00" : date('h:i:s', strtotime($TIMEin));
+                    $TIMEin = ($TIMEin== NULL) ? "00:00:00" : date('h:i:s', strtotime($TIMEin));
+                   
                     //เวลาออก
                     $TIMEout = $getData[4];
-                    $TIMEout = ($TIMEout== NULL or "NULL") ? "00:00:00" : date('h:i:s', strtotime($TIMEout));
+                    $TIMEout = ($TIMEout== NULL) ? "00:00:00" : date('h:i:s', strtotime($TIMEout));
                     //ชั่วโมง
                     $Hours = $getData[5];
                     $Hours = ($Hours== NULL) ? "<p style='color: red;'>error ข้อมูลหายไป</p>" : $Hours;
